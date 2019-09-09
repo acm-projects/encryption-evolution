@@ -3,7 +3,7 @@
 
 ## MVP
 - A main menu with level selection
-- At least 5 interactive levels 
+- At least 3 interactive levels 
 - Levels center around progressively harder and more complex ciphers
 - Guides players on each step of encoding a message using different algorithms / ciphers
 - Allows players to decrypt a reply
