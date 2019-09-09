@@ -25,10 +25,12 @@
 
 ## Suggestions
 - Use [Godot Game Maker](https://godotengine.org/) + GitHub
-- However, feel free to look around at other game engines (ask me if you want my opinions)
+  - Open source (extendable through C++), built-in IDE, cross platform (including 3DS!), reportedly easy version control with Git, language: GDScript which is similar to Python or you can use C++, light-weight
+- However, feel free to look around at other game engines
   - [Cocos2DX](https://cocos2d-x.org/)
-  - [Corona](https://coronalabs.com/)
-  - [MonoGame](http://www.monogame.net/)
+    - Open source, cross platform, language: Lua, lots of 3rd party assets
+  - [Corona SDK](https://coronalabs.com/)
+    - Cross platform, language: Lua, use your own text editor, active community
   - Thoughts on Unity or GameMaker: 
     - more complex than necessary for a 2D game
     - more drag and drop than programming
