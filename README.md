@@ -19,13 +19,15 @@
 ## Resources
 - [Git Bash for Windows](https://gitforwindows.org)
 - [Cipher Options](http://practicalcryptography.com/ciphers/)
-- 2D Assets 
+- Free 2D Assets 
   - [GameDeveloperStudio](https://www.gamedeveloperstudio.com/index.php)
   - [Itch.io](https://itch.io/game-assets/free/tag-2d)
-
-## Suggestions
+### Suggestions
 - Use [Godot Game Maker](https://godotengine.org/) + GitHub
   - Open source (extendable through C++), built-in IDE, cross platform (including 3DS!), reportedly easy version control with Git, language: GDScript which is similar to Python or you can use C++, light-weight
+  - Tutorials:
+    - [Official Godot Documentation : Getting Started](https://docs.godotengine.org/en/3.1/getting_started/step_by_step/index.html)
+    - [Godot Engine 3 - Platform Game Tutorial](https://www.youtube.com/watch?v=wETY5_9kFtA) 
 - However, feel free to look around at other game engines
   - [Cocos2DX](https://cocos2d-x.org/)
     - Open source, cross platform, language: Lua, lots of 3rd party assets
@@ -35,4 +37,10 @@
     - more complex than necessary for a 2D game
     - more drag and drop than programming
     - difficult with version control
+    
+## Extra Inspiration 
+- [Cypher](https://store.steampowered.com/app/746710/Cypher/)
+  - Steam indie game, first person
+- [Cipher](http://www.gamemastertips.com/cipher/cipher.htm)
+  - Web game focusing on cyber security
 
