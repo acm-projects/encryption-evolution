@@ -2,23 +2,29 @@
 2D game that teaches people the evolution of encryption, from simple ciphers to modern encryption algorithms
 
 ## MVP
-- A main menu with level selection
-- At least 3 interactive levels 
-- Levels center around progressively harder and more complex ciphers
-- Guides players on each step of encoding a message using different algorithms / ciphers
-- Allows players to decrypt a reply
+- A starting main menu with selectable levels
+- At least 3 interactive levels:
+  - Levels center around progressively harder and more complex ciphers
+  - Guides players on each step of encoding a message using different algorithms / ciphers
+  - Allows players to decrypt a reply
 - A glossary of important vocabulary is included (ie. definitions of cipher, encode, hash, key, etc)
 
 ## Stretch Goals
-- Levels incorporate history and story elements
-- Improved graphics + animation
-- Practice modes
-- Able to save progress and unlock levels
+- Levels incorporate history and story elements in order to become more fleshed out and immersive
+- Improved graphics and animation
+- Practice modes allowing players to use the same ciphers they were taught but with new messages to encrypt/decrypt and no/less guidance
+  - Unlockable after completion of relevant level
+- Enable account creation and authorization
+  - Able to save progress and unlock levels
 - Add more levels (although I'd prefer quality over quantity)
 
 ## Resources
 - [Git Bash for Windows](https://gitforwindows.org)
-- [Cipher Options](http://practicalcryptography.com/ciphers/)
+- Cyptography:
+  - [Cipher Options](http://practicalcryptography.com/ciphers/)
+  - [Fisher-Yates Shuffle Algorithm](https://exceptionnotfound.net/understanding-the-fisher-yates-card-shuffling-algorithm/)
+  - [Coursera: Cryptography](https://www.coursera.org/learn/crypto?action=enroll)
+  - [Crash Course](https://www.youtube.com/watch?v=jhXCTbFnK8o&vl=en)
 - Free 2D Assets 
   - [GameDeveloperStudio](https://www.gamedeveloperstudio.com/index.php)
   - [Itch.io](https://itch.io/game-assets/free/tag-2d)
@@ -39,6 +45,7 @@
     - difficult with version control
     
 ## Extra Inspiration 
+Not the goal, just a starting point or inspiration
 - [Cypher](https://store.steampowered.com/app/746710/Cypher/)
   - Steam indie game, first person
 - [Cipher](http://www.gamemastertips.com/cipher/cipher.htm)
