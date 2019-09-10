@@ -33,12 +33,15 @@
   - Open source (extendable through C++), built-in IDE, cross platform (including 3DS!), reportedly easy version control with Git, language: GDScript which is similar to Python or you can use C++, light-weight
   - Tutorials:
     - [Official Godot Documentation : Getting Started](https://docs.godotengine.org/en/3.1/getting_started/step_by_step/index.html)
+    - [GDScript Intro](https://www.gamefromscratch.com/page/Godot-3-Tutorial-GDScript-Programming-101.aspx)
     - [Godot Engine 3 - Platform Game Tutorial](https://www.youtube.com/watch?v=wETY5_9kFtA) 
 - However, feel free to look around at other game engines
   - [Cocos2DX](https://cocos2d-x.org/)
     - Open source, cross platform, language: Lua, lots of 3rd party assets
+    - [Starter Pack](https://cocos2d-x.org/learn)
   - [Corona SDK](https://coronalabs.com/)
     - Cross platform, language: Lua, use your own text editor, active community
+    - [Starter Pack](https://coronalabs.com/learn/)
   - Thoughts on Unity or GameMaker: 
     - more complex than necessary for a 2D game
     - more drag and drop than programming
@@ -47,7 +50,7 @@
 ## Extra Inspiration 
 Not the goal, just a starting point or inspiration
 - [Cypher](https://store.steampowered.com/app/746710/Cypher/)
-  - Steam indie game, first person
+  - Steam indie game, first person journey into a museum dedicated to cryptography
 - [Cipher](http://www.gamemastertips.com/cipher/cipher.htm)
   - Web game focusing on cyber security
 
