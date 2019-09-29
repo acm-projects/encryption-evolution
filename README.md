@@ -25,6 +25,8 @@
 - Cyptography:
   - [Cipher Options](http://practicalcryptography.com/ciphers/)
     - A good website with a lot of ciphers, an introduction to each, and their algorithms.
+  - [Alt. Cipher Website](http://rumkin.com/tools/cipher/)
+    - Alternate cipher website
   - [Fisher-Yates Shuffle Algorithm](https://exceptionnotfound.net/understanding-the-fisher-yates-card-shuffling-algorithm/)
     - An extra option not included in the above website.
   - [Crash Course](https://www.youtube.com/watch?v=jhXCTbFnK8o&vl=en)
