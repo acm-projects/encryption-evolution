@@ -441,56 +441,56 @@ alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 284.0
-margin_right = 40.0
+margin_right = 46.0
 margin_bottom = 298.0
 alignment = 1
 
 [node name="Letter1" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_right = 8.0
+margin_right = 6.0
 margin_bottom = 14.0
-text = "h"
+text = "_"
 
 [node name="Letter2" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_left = 12.0
+margin_left = 10.0
 margin_right = 16.0
 margin_bottom = 14.0
-text = "i"
+text = "_"
 
 [node name="Letter3" type="Label" parent="VBoxContainer/HBoxContainer"]
 margin_left = 20.0
-margin_right = 24.0
+margin_right = 26.0
 margin_bottom = 14.0
-text = "i"
+text = "_"
 
 [node name="Letter4" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_left = 28.0
-margin_right = 32.0
+margin_left = 30.0
+margin_right = 36.0
 margin_bottom = 14.0
-text = "i"
+text = "_"
 
 [node name="Letter5" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_left = 36.0
-margin_right = 40.0
+margin_left = 40.0
+margin_right = 46.0
 margin_bottom = 14.0
-text = "i"
+text = "_"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 302.0
-margin_right = 40.0
+margin_right = 46.0
 margin_bottom = 316.0
 alignment = 1
 
 [node name="Letter6" type="Label" parent="VBoxContainer/HBoxContainer2"]
-margin_left = 12.0
-margin_right = 20.0
+margin_left = 15.0
+margin_right = 21.0
 margin_bottom = 14.0
-text = "h"
+text = "_"
 
 [node name="Letter7" type="Label" parent="VBoxContainer/HBoxContainer2"]
-margin_left = 24.0
-margin_right = 28.0
+margin_left = 25.0
+margin_right = 31.0
 margin_bottom = 14.0
-text = "i"
+text = "_"
 
 [node name="Spinner" type="Node" parent="."]
 
@@ -824,6 +824,7 @@ margin_left = 230.0
 margin_top = 361.0
 margin_right = 393.0
 margin_bottom = 420.0
+valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="Spinner"]
 margin_left = 75.8876

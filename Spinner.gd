@@ -18,7 +18,7 @@ func _ready():
 	set_physics_process(true)
 	set_process_input(true)
 	sprite.set_meta("_edit_lock_", false)
-	label_dict = {1: "Letter1", 2: "Letter2", 3: "Letter3"}
+	label_dict = {0: "Letter1", 1: "Letter2", 2: "Letter3", 3: "Letter4", 4: "Letter5", 5: "Letter6", 6: "Letter7"}
 
 # capturing mouse click on spinner
 func _on_Spinner_input_event(viewport, event, shape_idx):
@@ -73,166 +73,166 @@ func _physics_process(delta):
 func _on_A_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("A");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("A");
 		num_letters_pressed = num_letters_pressed + 1
 
 func _on_N_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("N");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("N");
 		num_letters_pressed = num_letters_pressed + 1
 
 func _on_R_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("R");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("R");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_S_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("S");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("S");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_T_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("T");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("T");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_U_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("U");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("U");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_W_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("W");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("W");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_X_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("X");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("X");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_Y_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("Y");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("Y");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_Z_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("Z");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("Z");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_O_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("O");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("O");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_P_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("P");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("P");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_Q_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("Q");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("Q");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_V_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("V");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("V");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_B_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("B");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("B");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_C_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("C");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("C");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_D_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("D");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("D");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_E_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("E");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("E");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_F_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("F");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("F");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_G_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("G");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("G");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_H_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("H");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("H");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_I_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("I");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("I");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_J_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("J");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("J");
 		num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_K_pressed():
 	if sprite.get_meta("_edit_lock_") == true:
 		torque = 0
-		get_tree().get_root().get_node("Node").find_node("Letter1").set_text("K");
+		get_tree().get_root().get_node("Node").find_node(label_dict.get(num_letters_pressed, "Letter5")).set_text("K");
 		num_letters_pressed = num_letters_pressed + 1
 
 
