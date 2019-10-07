@@ -6,7 +6,7 @@
 position = Vector2( 38, 25 )
 
 [node name="Panel" parent="." instance=ExtResource( 1 )]
-margin_left = 343.968
-margin_top = 177.565
-margin_right = 532.968
-margin_bottom = 309.565
+margin_left = 195.968
+margin_top = 100.565
+margin_right = 384.968
+margin_bottom = 232.565
