@@ -15,6 +15,7 @@ _global_script_class_icons={
 
 [application]
 
+<<<<<<< HEAD
 config/name="Encryption Evolution"
 run/main_scene="res://Level1.tscn"
 config/icon="res://icon.png"
@@ -27,6 +28,12 @@ lmb={
  ]
 }
 
+=======
+config/name="Test Project"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+>>>>>>> Encryptor
 [rendering]
 
 environment/default_environment="res://default_env.tres"
