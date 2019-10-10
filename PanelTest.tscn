@@ -3,10 +3,10 @@
 [ext_resource path="res://Encryptor.gd" type="Script" id=1]
 
 [node name="Panel" type="Panel"]
-margin_left = 268.862
-margin_top = 96.2264
-margin_right = 462.862
-margin_bottom = 226.226
+margin_left = 197.862
+margin_top = 171.226
+margin_right = 391.862
+margin_bottom = 301.226
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
