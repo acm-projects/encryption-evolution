@@ -40,4 +40,24 @@ rect_min_size = Vector2( 200, 30 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Level Select"
+
+[node name="FurtherReading" type="Button" parent="."]
+margin_left = 145.0
+margin_top = 292.0
+margin_right = 345.0
+margin_bottom = 322.0
+rect_min_size = Vector2( 200, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Further Reading"
+
+[node name="Credits" type="Button" parent="."]
+margin_left = 145.0
+margin_top = 342.0
+margin_right = 345.0
+margin_bottom = 372.0
+rect_min_size = Vector2( 200, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Credits"
 [connection signal="pressed" from="NewGame" to="NewGame" method="_on_NewGame_pressed"]
