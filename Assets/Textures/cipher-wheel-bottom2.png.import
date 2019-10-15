@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CCBG.png-642eb1d72c68f36a01913e980e8c178d.stex"
+path="res://.import/cipher-wheel-bottom2.png-87d8e8c38ef623f0f152cd4131ec2cbe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CCBG.png"
-dest_files=[ "res://.import/CCBG.png-642eb1d72c68f36a01913e980e8c178d.stex" ]
+source_file="res://Assets/Textures/cipher-wheel-bottom2.png"
+dest_files=[ "res://.import/cipher-wheel-bottom2.png-87d8e8c38ef623f0f152cd4131ec2cbe.stex" ]
 
 [params]
 
