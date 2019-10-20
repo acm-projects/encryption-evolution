@@ -33,7 +33,7 @@ func _changeLetter(letter, shift, type):
 	
 
 func _encryptor(givenWord):
-	print("Encryptor")
+#	print("Encryptor")
 	var shift = randi() % 26 + 1
 	print(givenWord)
 	print(shift)
@@ -49,7 +49,7 @@ func _encryptor(givenWord):
 	_decryptor(newWord, shift)
 	
 func _decryptor(newWord, shift):
-	print("Decryptor")
+	#print("Decryptor")
 	
 	var realWord = ""
 	
@@ -64,3 +64,4 @@ func _on_Button_pressed():
 	var givenWord = "Word"      # Change this to anything
 	_encryptor(givenWord)
 	_encryptor("Message Fake News")
+ 
