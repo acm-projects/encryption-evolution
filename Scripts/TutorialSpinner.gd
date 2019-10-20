@@ -4,6 +4,7 @@ onready var wheel = get_node("OuterWheel") # variable containing the outer wheel
 var input_angle = 0 # the angle that the user inputs based on the key that they input
 var num_letters_pressed = 0 # how many letters have been entered, AKA how many buttons have been pressed
 var label_dict # dictionary from number of letters pressed to label to be populated
+
 var encryptor = null # encryptor object to call for the decrypted message variable
 
 # Called when the node enters the scene tree for the first time.
@@ -16,6 +17,7 @@ func _ready():
 	 6: "Blank7", 7: "Blank8", 8: "Blank9", 9: "Blank10"}
 
 # capturing mouse click on spinner
+
 func _on_Spinner_input_event(viewport, event, shape_idx):
 	if event.is_action("lmb"):
 		wheel.set_meta("_edit_lock_", true)
@@ -28,6 +30,7 @@ func _on_GoButton_pressed():
 
 # deletes the last entered letter by decrementing num_letters_pressed and returning the corresponding text field to "_"
 func _on_Backspace_pressed():
+
 	if num_letters_pressed > 10: # TODO Use variable size instead of hard coding
 		num_letters_pressed = 10
 	num_letters_pressed = num_letters_pressed - 1
@@ -51,21 +54,25 @@ func _check_Encrypted():
 	if (enteredMessage == encryptedMessage):
 		get_tree().get_root().get_node("CaesarCipher").find_node("NextArrow").visible = true # Shows green arrow
 
+
 # all of these funtions allow the letter buttons to function. They change the appropriate
 # text field to the button value and then increment the couter of the number of buttons pressed.
 func _on_A_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("A");
 		num_letters_pressed = num_letters_pressed + 1
 
 func _on_N_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("N");
+
 		num_letters_pressed = num_letters_pressed + 1
 
 func _on_R_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("R");
+
 		num_letters_pressed = num_letters_pressed + 1
 
 
@@ -78,6 +85,7 @@ func _on_S_pressed():
 func _on_T_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("T");
+
 		num_letters_pressed = num_letters_pressed + 1
 
 
