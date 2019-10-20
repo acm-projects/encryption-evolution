@@ -7,11 +7,11 @@ var label_dict
 var message_no_spaces = "LIBRARYWENEEDYOU"
 var message = "LIBRARY. WE NEED YOU."
 var encrypted_message = ""
-var key = 5
+var key = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-#	get_node("Button").connect("pressed", self, "_on_Button_pressed")
+	key = get_tree().get_root().get_node("CaesarCipher").find_node("OuterWheel").get_meta("_key_")
 	label_dict = {0: "Blank1", 1: "Blank2", 2: "Blank3", 3: "Blank4", 4: "Blank5", 5: "Blank6", 6: "Blank7", 7: "Blank8", 8: "Blank9", 9: "Blank10", 10: "Blank11", 11: "Blank12", 12: "Blank13", 13: "Blank14", 14: "Blank15", 15: "Blank16"}
 	get_tree().get_root().get_node("CaesarCipher").find_node("MessageToDecrypt").set_text(_encryptor(message));
 
@@ -64,7 +64,5 @@ func _on_CheckDecryption_pressed():
 	user_input = ""
 	for i in range(label_dict.size()):
 		user_input = user_input + get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(i)).get_text()
-	print(user_input)
-	print(user_input == message_no_spaces)
 	if user_input == message_no_spaces:
 		get_tree().change_scene("res://CafeEndScene.tscn")
