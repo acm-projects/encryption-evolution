@@ -4,15 +4,22 @@ extends Control
 # var a = 2
 # var b = "text"
 
-var ALPHA = [['A', 'B', 'C', 'D', 'E'],  ['F', 'G', 'H', 'I', 'J'], ['K', 'L', 'M', 'N', 'O'], ['P', 'R', 'S', 'T', 'U'], ['V', 'W', 'X', 'Y', 'Z']]
+var ALPHA = [['A', 'B', 'C', 'D', 'E'], 
+			 ['F', 'G', 'H', 'I', 'J'], 
+			 ['K', 'L', 'M', 'N', 'O'], 
+			 ['P', 'R', 'S', 'T', 'U'], 
+			 ['V', 'W', 'X', 'Y', 'Z']]
 
 var key = "keyword" 
 var message = "message"
+# ignore me
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print("debug")
 	_createEncryptGrid(key) 
-	_encryptMessage(message)
+	var encrypted = _encryptMessage(message)
+	_decryptMessage(encrypted)
 	pass # Replace with function body.
 
 #Check if the letter is in the keyword
@@ -169,6 +176,7 @@ func _encryptMessage(message):
 		i += 2
 		
 	print(hidden, "\n") #DEBUG STATEMENT
+	return hidden
 	
 #Find the letter in the Encrypt Grid
 func _findLetter(letter):
@@ -188,3 +196,76 @@ func _findLetter(letter):
 				
 				return row_col
 
+func _decryptMessage(encMessage):
+	
+	var unhidden = ""
+	
+	var unalter = ""
+
+	# First DECRYPT message
+	var i = 0
+	while (i < len(encMessage)):
+		#Position of encrypted letter 1
+		var pos1 = _findLetter(encMessage[i])
+		
+		#Position of encrypted letter 2
+		var pos2 = _findLetter(encMessage[i + 1])
+
+		#[0] -> rows, Check if letters in the same row
+		#New letter = 1 letter to the left of old letter
+		#Same row, column - 1
+		if (pos1[0] == pos2[0]):
+			
+			if (pos1[1] - 1 < 0):
+				unhidden = unhidden + ALPHA[ pos1[0] ][ pos1[1] - 1 + 5 ]
+				
+			else:
+				unhidden = unhidden + ALPHA[ pos1[0] ][ pos1[1] - 1 ]
+				
+			if (pos2[1] - 1 < 0):
+				unhidden = unhidden + ALPHA[ pos2[0] ][ pos2[1] - 1 + 5 ]
+			
+			else:
+				unhidden = unhidden + ALPHA[ pos2[0] ][ pos2[1] - 1 ]
+				
+		#[1] -> col, Check if letter in same column
+		#New letter = 1 letter above the old letter
+		#row - 1, same column
+		elif (pos1[1] == pos2[1]):
+			
+			if (pos1[0] - 1 < 0):
+				unhidden = unhidden + ALPHA[ pos1[0] - 1 + 5 ][ pos1[1] ]
+				
+			else:
+				unhidden = unhidden + ALPHA[ pos1[0] - 1 ][ pos1[1] ]
+			
+			if (pos2[0] - 1 < 0):
+				unhidden = unhidden + ALPHA[ pos2[0] - 1 + 5 ][ pos2[1] ]
+				
+			else:
+				unhidden = unhidden + ALPHA[ pos2[0] - 1][ pos2[1] ]
+			
+		#Restored Letter 1 = row of Letter 1, col of Letter 2
+		#Restored Letter 2 = row of Letter 2, col of Letter 1
+		else:
+			unhidden = unhidden + ALPHA[ pos1[0] ][ pos2[1] ]
+			unhidden = unhidden + ALPHA[ pos2[0] ][ pos1[1] ]
+			
+		i += 2
+	
+	# Removes "X"s between identical characters in DECRYPTED message
+	i = 0
+	for i in (len(unhidden)-2):
+		if i != (len(unhidden) - 1 - 1):
+			
+			#Removing "X" between the sme two letters
+			if ( (unhidden[i+1] == 'X') && (unhidden[i] == unhidden[i + 2]) ):
+				unhidden[i+1] = " "
+		
+	for i in len(unhidden):
+		if( unhidden[i] != " "):
+			unalter = unalter + unhidden[i]
+	
+	print(unalter, "\n") #DEBUG STATEMENT
+	
+	return unalter
