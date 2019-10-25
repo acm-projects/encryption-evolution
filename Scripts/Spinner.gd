@@ -1,7 +1,7 @@
 extends Area2D
 
 
-onready var wheel = get_node("OuterWheel")
+onready var wheel = get_node("Sprite")
 
 var torque_damp = 0.90 # slow down spinner
 var torque = 0 # apply force to spinner
@@ -65,7 +65,7 @@ func _physics_process(delta):
 
 	if abs(fmod(wheel.get_rotation(), 2*PI) - stop_angle) < .01:
 		wheel.set_meta("_edit_lock_", true)
-		get_tree().get_root().get_node("CaesarCipher").find_node("Locked").set_text(locked_message);
+		#get_tree().get_root().get_node("CaesarCipher").find_node("Locked").set_text(locked_message);
 	if not wheel.get_meta("_edit_lock_"):
 
 		mouse_timer += delta

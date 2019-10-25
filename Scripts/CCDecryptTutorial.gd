@@ -38,7 +38,7 @@ func _process(delta):
 			if (user[i] != answer[i]):
 				return 
 		yield(get_tree().create_timer(1), "timeout")
-		get_tree().change_scene("res://Real Decryption Intro.tscn")
+		get_tree().change_scene("res://Scenes/Real Decryption Intro.tscn")
 		
 				
 				

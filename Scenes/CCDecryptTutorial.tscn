@@ -497,6 +497,7 @@ __meta__ = {
 script = ExtResource( 3 )
 
 [node name="SpinnerArea" type="Area2D" parent="Spinner"]
+editor/display_folded = true
 position = Vector2( 310.392, 300.137 )
 script = ExtResource( 4 )
 

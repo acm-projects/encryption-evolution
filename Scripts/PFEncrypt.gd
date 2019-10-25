@@ -144,7 +144,7 @@ func _encryptMessage(message):
 			else:
 				hidden = hidden + ALPHA[ pos1[0] ][ pos1[1] + 1 ]
 				
-			if (pos1[1] + 1 >= 5):
+			if (pos2[1] + 1 >= 5):
 				hidden = hidden + ALPHA[ pos2[0] ][ pos2[1] + 1 - 5 ]
 			
 			else:
