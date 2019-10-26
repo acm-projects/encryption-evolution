@@ -1,26 +1,11 @@
-extends Control
+extends Label
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var ALPHA = [ ['A', 'B', 'C', 'D', 'E'], 
+			  ['F', 'G', 'H', 'I', 'J'], 
+			  ['K', 'L', 'M', 'N', 'O'], 
+			  ['P', 'R', 'S', 'T', 'U'], 
+			  ['V', 'W', 'X', 'Y', 'Z'] ]
 
-var ALPHA = [['A', 'B', 'C', 'D', 'E'], 
-			 ['F', 'G', 'H', 'I', 'J'], 
-			 ['K', 'L', 'M', 'N', 'O'], 
-			 ['P', 'R', 'S', 'T', 'U'], 
-			 ['V', 'W', 'X', 'Y', 'Z']]
-
-var key = "keyword" 
-var message = "message"
-# ignore me
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	print("debug")
-	_createEncryptGrid(key) 
-	var encrypted = _encryptMessage(message)
-	_decryptMessage(encrypted)
-	pass # Replace with function body.
 
 #Check if the letter is in the keyword
 func _checkKey(key, letter):
@@ -60,7 +45,7 @@ func _deleteDuplicates(key):
 	
 #Creating full encryption gird with the key
 func _createEncryptGrid(key):
-
+	
 	var index = 0
 	var letter = 65 #ASCII val for 'A'
 	
@@ -72,7 +57,7 @@ func _createEncryptGrid(key):
 			
 			#Put key into the array first
 			if (index < len(actualKey)):
-				ALPHA[i][j] =(actualKey[index]).to_upper()
+				ALPHA[i][j] = (actualKey[index]).to_upper()
 				index += 1
 			
 			#Put rest of the alphabet without duplicates in
@@ -90,11 +75,26 @@ func _createEncryptGrid(key):
 				ALPHA[i][j] = char(letter)
 				letter += 1  #Get to the next ASCII letter value
 			
-			#DEBUG STATEMENT
-			print(ALPHA[i][j])
+			
+func _displayEncryptMessage(message):
+	
+	var display = ""
+	
+	for i in len(message):
+		
+		if (i % 2 == 1):
+			display = display + message[i] + ' '
+			
+		else:
+			display = display + message[i]
+
+	return display
+
 
 #Encrypt the message with the EncryptGrid
-func _encryptMessage(message):
+func _encryptMessage(key, message):
+	
+	_createEncryptGrid(key)
 	
 	#Alter = Change message so it can be encrypted
 	var alter = "" 

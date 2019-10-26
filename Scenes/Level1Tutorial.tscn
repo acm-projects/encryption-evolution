@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://TutorialSpinner.gd" type="Script" id=1]
-[ext_resource path="res://cipher-wheel-bottom2.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/TutorialSpinner.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Textures/cipher-wheel-bottom2.png" type="Texture" id=2]
 
 [sub_resource type="StyleBoxTexture" id=1]
 
@@ -809,7 +809,7 @@ margin_bottom = -216.0
 
 [node name="LetterRow1" type="HBoxContainer" parent="Message"]
 editor/display_folded = true
-margin_right = 391.0
+margin_right = 390.0
 margin_bottom = 14.0
 alignment = 1
 
@@ -840,7 +840,7 @@ text = "_"
 [node name="LetterRow2" type="HBoxContainer" parent="Message"]
 editor/display_folded = true
 margin_top = 18.0
-margin_right = 391.0
+margin_right = 390.0
 margin_bottom = 32.0
 alignment = 1
 

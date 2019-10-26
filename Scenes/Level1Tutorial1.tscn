@@ -1,9 +1,13 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://CaesarEncryptor.gd" type="Script" id=1]
-[ext_resource path="res://TutorialSpinner.gd" type="Script" id=2]
-[ext_resource path="res://cipher-wheel-bottom2.png" type="Texture" id=3]
-[ext_resource path="res://arrowIcon.jpg" type="Texture" id=4]
+[ext_resource path="res://Scripts/CaesarEncryptor.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/TutorialSpinner.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Textures/cipher-wheel-bottom2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/arrowIcon.jpg" type="Texture" id=4]
+
+
+
+
 
 [sub_resource type="StyleBoxTexture" id=1]
 

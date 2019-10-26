@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Scripts/Encryptor.gd" type="Script" id=1]
 
-
 [node name="Panel" type="Panel"]
 margin_left = 197.862
 margin_top = 171.226
