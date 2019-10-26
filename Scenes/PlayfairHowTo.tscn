@@ -1,0 +1,403 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://PlayfairHowTo.gd" type="Script" id=1]
+[ext_resource path="res://cnr.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://upscale-245635315016212.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=26]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=27]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=28]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="PlayfairAsset" type="Node"]
+script = ExtResource( 1 )
+
+[node name="PlayfairGrid" type="HBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 75.0
+margin_top = -248.0
+margin_right = 388.0
+margin_bottom = 73.0
+
+[node name="Col1" type="VBoxContainer" parent="PlayfairGrid"]
+editor/display_folded = true
+margin_right = 66.0
+margin_bottom = 321.0
+
+[node name="R0C0" type="Label" parent="PlayfairGrid/Col1"]
+margin_right = 66.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 1 )
+text = "K "
+
+[node name="R1C0" type="Label" parent="PlayfairGrid/Col1"]
+margin_top = 65.0
+margin_right = 66.0
+margin_bottom = 126.0
+custom_fonts/font = SubResource( 2 )
+text = "R"
+
+[node name="R2C0" type="Label" parent="PlayfairGrid/Col1"]
+margin_top = 130.0
+margin_right = 66.0
+margin_bottom = 191.0
+custom_fonts/font = SubResource( 3 )
+text = "F"
+
+[node name="R3C0" type="Label" parent="PlayfairGrid/Col1"]
+margin_top = 195.0
+margin_right = 66.0
+margin_bottom = 256.0
+custom_fonts/font = SubResource( 4 )
+text = "M "
+
+[node name="R4C0" type="Label" parent="PlayfairGrid/Col1"]
+margin_top = 260.0
+margin_right = 66.0
+margin_bottom = 321.0
+custom_fonts/font = SubResource( 5 )
+text = "T"
+
+[node name="Col2" type="VBoxContainer" parent="PlayfairGrid"]
+editor/display_folded = true
+margin_left = 70.0
+margin_right = 136.0
+margin_bottom = 321.0
+
+[node name="R0C1" type="Label" parent="PlayfairGrid/Col2"]
+margin_right = 66.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 6 )
+text = "E"
+
+[node name="R1C1" type="Label" parent="PlayfairGrid/Col2"]
+margin_top = 65.0
+margin_right = 66.0
+margin_bottom = 126.0
+custom_fonts/font = SubResource( 7 )
+text = "D "
+
+[node name="R2C1" type="Label" parent="PlayfairGrid/Col2"]
+margin_top = 130.0
+margin_right = 66.0
+margin_bottom = 191.0
+custom_fonts/font = SubResource( 8 )
+text = "G"
+
+[node name="R3C1" type="Label" parent="PlayfairGrid/Col2"]
+margin_top = 195.0
+margin_right = 66.0
+margin_bottom = 256.0
+custom_fonts/font = SubResource( 9 )
+text = "N"
+
+[node name="R4C1" type="Label" parent="PlayfairGrid/Col2"]
+margin_top = 260.0
+margin_right = 66.0
+margin_bottom = 321.0
+custom_fonts/font = SubResource( 10 )
+text = "U"
+
+[node name="Col3" type="VBoxContainer" parent="PlayfairGrid"]
+editor/display_folded = true
+margin_left = 140.0
+margin_right = 206.0
+margin_bottom = 321.0
+
+[node name="R0C2" type="Label" parent="PlayfairGrid/Col3"]
+margin_right = 66.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 11 )
+text = "Y"
+
+[node name="R1C2" type="Label" parent="PlayfairGrid/Col3"]
+margin_top = 65.0
+margin_right = 66.0
+margin_bottom = 126.0
+custom_fonts/font = SubResource( 12 )
+text = "A "
+
+[node name="R2C2" type="Label" parent="PlayfairGrid/Col3"]
+margin_top = 130.0
+margin_right = 66.0
+margin_bottom = 191.0
+custom_fonts/font = SubResource( 13 )
+text = "H"
+
+[node name="R3C2" type="Label" parent="PlayfairGrid/Col3"]
+margin_top = 195.0
+margin_right = 66.0
+margin_bottom = 256.0
+custom_fonts/font = SubResource( 14 )
+text = "P"
+
+[node name="R4C2" type="Label" parent="PlayfairGrid/Col3"]
+margin_top = 260.0
+margin_right = 66.0
+margin_bottom = 321.0
+custom_fonts/font = SubResource( 15 )
+text = "V"
+
+[node name="Col4" type="VBoxContainer" parent="PlayfairGrid"]
+editor/display_folded = true
+margin_left = 210.0
+margin_right = 276.0
+margin_bottom = 321.0
+
+[node name="R0C3" type="Label" parent="PlayfairGrid/Col4"]
+margin_right = 66.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 16 )
+text = "W "
+
+[node name="R1C3" type="Label" parent="PlayfairGrid/Col4"]
+margin_top = 65.0
+margin_right = 66.0
+margin_bottom = 126.0
+custom_fonts/font = SubResource( 17 )
+text = "B"
+
+[node name="R2C3" type="Label" parent="PlayfairGrid/Col4"]
+margin_top = 130.0
+margin_right = 66.0
+margin_bottom = 191.0
+custom_fonts/font = SubResource( 18 )
+text = "I"
+
+[node name="R3C3" type="Label" parent="PlayfairGrid/Col4"]
+margin_top = 195.0
+margin_right = 66.0
+margin_bottom = 256.0
+custom_fonts/font = SubResource( 19 )
+text = "Q"
+
+[node name="R4C3" type="Label" parent="PlayfairGrid/Col4"]
+margin_top = 260.0
+margin_right = 66.0
+margin_bottom = 321.0
+custom_fonts/font = SubResource( 20 )
+text = "X"
+
+[node name="Col5" type="VBoxContainer" parent="PlayfairGrid"]
+editor/display_folded = true
+margin_left = 280.0
+margin_right = 313.0
+margin_bottom = 321.0
+
+[node name="R0C4" type="Label" parent="PlayfairGrid/Col5"]
+margin_right = 33.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 21 )
+text = "O"
+
+[node name="R1C4" type="Label" parent="PlayfairGrid/Col5"]
+margin_top = 65.0
+margin_right = 33.0
+margin_bottom = 126.0
+custom_fonts/font = SubResource( 22 )
+text = "C"
+
+[node name="R2C4" type="Label" parent="PlayfairGrid/Col5"]
+margin_top = 130.0
+margin_right = 33.0
+margin_bottom = 191.0
+custom_fonts/font = SubResource( 23 )
+text = "L"
+
+[node name="R3C4" type="Label" parent="PlayfairGrid/Col5"]
+margin_top = 195.0
+margin_right = 33.0
+margin_bottom = 256.0
+custom_fonts/font = SubResource( 24 )
+text = "S"
+
+[node name="R4C4" type="Label" parent="PlayfairGrid/Col5"]
+margin_top = 260.0
+margin_right = 33.0
+margin_bottom = 321.0
+custom_fonts/font = SubResource( 25 )
+text = "Z"
+
+[node name="ContinueButton" type="Button" parent="."]
+margin_left = 164.486
+margin_top = 394.257
+margin_right = 303.486
+margin_bottom = 414.257
+text = "Continue"
+
+[node name="TextBackground" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -133.0
+color = Color( 0.0745098, 0.294118, 0.380392, 1 )
+
+[node name="TextBox" type="Label" parent="TextBackground"]
+margin_left = 20.0
+margin_right = 998.0
+margin_bottom = 132.0
+custom_fonts/font = SubResource( 26 )
+text = "First, lets get familiar with the basics of the playfair cipher."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Message" type="Label" parent="."]
+margin_left = 501.0
+margin_top = 84.0
+margin_right = 921.0
+margin_bottom = 135.0
+custom_fonts/font = SubResource( 27 )
+text = "Encrypt: MESSAGE"
+
+[node name="LetterBoxOutline1" type="TextureRect" parent="."]
+visible = false
+margin_left = 61.0
+margin_top = 33.0
+margin_right = 445.0
+margin_bottom = 417.0
+rect_scale = Vector2( 0.35, 0.75 )
+texture = ExtResource( 3 )
+
+[node name="LetterBoxOutline2" type="TextureRect" parent="."]
+visible = false
+margin_left = 269.716
+margin_top = 239.059
+margin_right = 653.716
+margin_bottom = 623.059
+rect_scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 3 )
+
+[node name="LetterBoxOutline3" type="TextureRect" parent="."]
+visible = false
+margin_left = 130.174
+margin_top = 109.876
+margin_right = 514.174
+margin_bottom = 493.876
+rect_scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 3 )
+
+[node name="LetterBoxOutline4" type="TextureRect" parent="."]
+visible = false
+margin_left = 123.174
+margin_top = 25.8755
+margin_right = 507.174
+margin_bottom = 409.876
+rect_scale = Vector2( 0.58, 0.95 )
+texture = ExtResource( 3 )
+
+[node name="EncryptedMessage" type="Label" parent="."]
+margin_left = 583.0
+margin_top = 247.0
+margin_right = 927.0
+margin_bottom = 319.0
+custom_fonts/font = SubResource( 28 )
+[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
