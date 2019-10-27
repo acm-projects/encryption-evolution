@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/specimenposter_4967.jpg-9da5fc8bb21b6f58a58835fe364aebc4.stex"
+path="res://.import/specimenposter_4967.jpg-cac195a14b493003c17cf4a3709ef544.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://quicksand/specimenposter_4967.jpg"
-dest_files=[ "res://.import/specimenposter_4967.jpg-9da5fc8bb21b6f58a58835fe364aebc4.stex" ]
+source_file="res://DialogueTutorial/quicksand/specimenposter_4967.jpg"
+dest_files=[ "res://.import/specimenposter_4967.jpg-cac195a14b493003c17cf4a3709ef544.stex" ]
 
 [params]
 
