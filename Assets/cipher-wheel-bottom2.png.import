@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/quicksand.jpg-2512252749d588eda0b313f9df3a1f08.stex"
+path="res://.import/cipher-wheel-bottom2.png-1f90538425f6e61609a2d77e3111b362.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DialogueTutorial/quicksand/quicksand.jpg"
-dest_files=[ "res://.import/quicksand.jpg-2512252749d588eda0b313f9df3a1f08.stex" ]
+source_file="res://Assets/cipher-wheel-bottom2.png"
+dest_files=[ "res://.import/cipher-wheel-bottom2.png-1f90538425f6e61609a2d77e3111b362.stex" ]
 
 [params]
 

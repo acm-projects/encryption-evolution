@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/quicksand.jpg-2512252749d588eda0b313f9df3a1f08.stex"
+path="res://.import/LibraryBackground.jpg-91d09920b1bb67de7f9c7eaf40907b79.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DialogueTutorial/quicksand/quicksand.jpg"
-dest_files=[ "res://.import/quicksand.jpg-2512252749d588eda0b313f9df3a1f08.stex" ]
+source_file="res://Assets/Backgrounds/LibraryBackground.jpg"
+dest_files=[ "res://.import/LibraryBackground.jpg-91d09920b1bb67de7f9c7eaf40907b79.stex" ]
 
 [params]
 
