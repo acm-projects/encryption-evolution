@@ -1,8 +1,6 @@
 extends Area2D
 
-
-onready var wheel = get_node("Sprite")
-
+onready var wheel = get_node("OuterWheel")
 var torque_damp = 0.90 # slow down spinner
 var torque = 0 # apply force to spinner
 var held = false
@@ -11,7 +9,6 @@ var temp_add_rot = 0 # angle offset when holding spinner
 var mouse_speed = 0
 var mouse_last_pos = Vector2()
 var mouse_timer = 0
-
 var key = 0
 var stop_angle = 0
 var num_letters_pressed = 0 # how many letters have been entered, AKA how many buttons have been pressed
@@ -22,7 +19,7 @@ var locked_message = "Locked!"
 func _ready():
 	randomize()
 	key = randi()%27 + 1
-	locked_message = locked_message + "\nKey = " + str(key)
+	locked_message = locked_message + " Key = " + str(key)
 	set_physics_process(true)
 	set_process_input(true)
 	wheel.set_meta("_edit_lock_", false)
@@ -37,9 +34,7 @@ func _on_Spinner_input_event(viewport, event, shape_idx):
 	if event.is_action("lmb"):
 		held = event.is_action_pressed("lmb")
 		torque = 0
-
 		temp_add_rot = wheel.get_rotation() - wheel.get_position().angle_to_point(get_local_mouse_position())
-
 
 func _input(event):
 	if event.is_action_type() and not event.is_action_pressed("lmb"):
@@ -50,7 +45,6 @@ func _input(event):
 
 # sprite look at mouse
 func point():
-
 	var rot = wheel.get_rotation()
 	wheel.set_rotation(wheel.get_position().angle_to_point(get_local_mouse_position()) + temp_add_rot)
 	if rot > wheel.get_rotation():
@@ -62,12 +56,10 @@ func spin(amt):
 	torque += amt
 
 func _physics_process(delta):
-
 	if abs(fmod(wheel.get_rotation(), 2*PI) - stop_angle) < .01:
 		wheel.set_meta("_edit_lock_", true)
-		#get_tree().get_root().get_node("CaesarCipher").find_node("Locked").set_text(locked_message);
+		get_tree().get_root().get_node("CaesarCipher").find_node("Locked").set_text(locked_message);
 	if not wheel.get_meta("_edit_lock_"):
-
 		mouse_timer += delta
 		if mouse_timer > 0.2:
 			mouse_speed = (mouse_speed + mouse_last_pos.distance_to(get_global_mouse_position())) / 2
@@ -78,7 +70,6 @@ func _physics_process(delta):
 		else:
 			if torque > 0.05:
 				var new_rot = wheel.get_rotation()
-
 				if clockwise:
 					new_rot -= torque * delta
 				else:
