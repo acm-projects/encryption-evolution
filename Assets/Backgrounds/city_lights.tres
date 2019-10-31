@@ -1,0 +1,5 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+flags = 4
+load_path = "res://Assets/Backgrounds/city.png-e4575851e7b94efe8a63adca929facef.stex"

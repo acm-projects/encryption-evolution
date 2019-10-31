@@ -1,0 +1,5 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+flags = 4
+load_path = "res://Assets/Backgrounds/library.png-4c657784bb40553f21de8ed811c05086.stex"
