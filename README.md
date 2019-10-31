@@ -20,7 +20,7 @@
 
 ## Resources
 - [Git Bash for Windows](https://gitforwindows.org)
-- Cyptography:
+- Cryptography:
   - [Cipher Options](http://practicalcryptography.com/ciphers/)
   - [Fisher-Yates Shuffle Algorithm](https://exceptionnotfound.net/understanding-the-fisher-yates-card-shuffling-algorithm/)
   - [Coursera: Cryptography](https://www.coursera.org/learn/crypto?action=enroll)
