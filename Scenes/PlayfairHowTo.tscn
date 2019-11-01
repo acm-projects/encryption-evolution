@@ -1,8 +1,8 @@
 [gd_scene load_steps=32 format=2]
 
-[ext_resource path="res://PlayfairHowTo.gd" type="Script" id=1]
-[ext_resource path="res://cnr.otf" type="DynamicFontData" id=2]
-[ext_resource path="res://upscale-245635315016212.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/PlayfairHowTo.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/cnr.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/upscale-245635315016212.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -104,8 +104,8 @@ font_data = ExtResource( 2 )
 size = 60
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=26]
-size = 25
+[sub_resource type="DynamicFont" id=29]
+size = 27
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=27]
@@ -344,7 +344,7 @@ color = Color( 0.0745098, 0.294118, 0.380392, 1 )
 margin_left = 20.0
 margin_right = 998.0
 margin_bottom = 132.0
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 29 )
 text = "First, lets get familiar with the basics of the playfair cipher."
 align = 1
 valign = 1

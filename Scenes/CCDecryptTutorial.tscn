@@ -7,7 +7,6 @@
 [ext_resource path="res://Assets/Textures/cipher-wheel-bottom2.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Fonts/cnr.otf" type="DynamicFontData" id=6]
 
-
 [sub_resource type="StyleBoxTexture" id=1]
 
 [sub_resource type="StyleBoxTexture" id=2]
