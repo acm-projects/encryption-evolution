@@ -16,7 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Cipher Chase"
+run/main_scene="res://Scenes/Main Menu/MainMenu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+SceneResize="*res://Scenes/Common/Scripts/SceneResize.gd"
 
 [display]
 
