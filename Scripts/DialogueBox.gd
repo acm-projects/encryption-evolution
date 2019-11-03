@@ -1,7 +1,22 @@
 extends RichTextLabel
 
 # Array for the different text boxes
-var dialogue = ["It's another lovely day in town, relaxing at your favorite cafe and reading up on the current news.", "Everything was normal, peaceful and...boring.","A little too boring. I wish there could be some excitement in my life...", "When suddenly...", "*CRASH*", "Ah, so sorry about that!", "A waiter looked at me apologetically, frantically trying to clean up the spiill on my table.", "No worries! Hey, you dropped something...", "Wait! They're already gone? They totally just ignored me.", "I guess it doesn't hurt to look at what they left...", "A sheet of paper, huh. Looks like gibberish to me.", "???", "Something about this seems... familiar somehow...", "There's a circle drawn next to the gibberish...!!! A cipher!", "Now to remember how it works..."]
+var dialogue = ["It's another lovely day in town, relaxing at your favorite cafe and reading up on the current news.",
+"Everything was normal, peaceful and...boring.",
+"A little too boring. I wish there could be some excitement in my life...", 
+"Lost in thought, I wasn't aware of a teetering stack of plates until it was too late...", 
+"*CRASH*", 
+"Ah, so sorry about that!", 
+"A waiter looked at me apologetically, frantically trying to clean up the spiill on my table.", 
+"No worries! Hey, you dropped something...", 
+"I mean a lot of things were dropped, but there was a piece of paper that fluttered over the mess.",
+"Wait! They're already gone? They totally just ignored me.",
+"I guess it doesn't hurt to look at what they left...", 
+"Scribbles, huh. Looks like gibberish to me.", 
+"???", 
+"Something about this seems... familiar somehow...", 
+"There's a circle drawn next to the gibberish...!!! A cipher!", 
+"Now to remember how it works..."]
 # Shows which text box is currently in use
 var page = 0
 

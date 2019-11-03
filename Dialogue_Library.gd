@@ -1,7 +1,29 @@
 extends RichTextLabel
 
 # Array for the different text boxes
-var dialogue = ["It's another lovely day in town, relaxing at your favorite cafe and reading up on the current news.", "Everything was normal, peaceful and...boring.","A little too boring. I wish there could be some excitement in my life...", "When suddenly...", "*CRASH*", "Ah, so sorry about that!", "A waiter looked at me apologetically, frantically trying to clean up the spiill on my table.", "No worries! Hey, you dropped something...", "Wait! They're already gone? They totally just ignored me.", "I guess it doesn't hurt to look at what they left...", "A sheet of paper, huh. Looks like gibberish to me.", "???", "Something about this seems... familiar somehow...", "There's a circle drawn next to the gibberish...!!! A cipher!", "Now to remember how it works..."]
+var dialogue = ["Well, here's the library, as requested. I wonder where my mysterious note taker is...",
+"Suddenly, it seemed like the world got darker. As I turned around, I found out why. A giant figure blocked my path, looming over me.",
+"I see you got our message?", 
+"!!! How exactly did a giant elephant sneak up on me?", 
+"So you’re the one I needed to see. What was the point of encrypting a call for help?", 
+"He looked confused and, for a second, I thought that somehow we were both looking for the wrong people. Suddenly, he began to laugh.", 
+"It’s elementary, friend! How could I be a secret agent without using secret messages?", 
+"What.", 
+"In my confused state, he gently pulled me aside, leading me down a labyrinth of bookshelves and hallways.",
+"Yes, yes. I'm sure you're confused, but we have work to do! Call me Elliot, by the way.",
+"Eventually, we came across an inconspicuous door. Was this a joke?", 
+"All this for a door? What exactly do you mean by wo-", 
+"My voice trailed off as Elliot opened the door, revealing a dark room filled with machinery.", 
+"Elliot looked triumphantly at me. As we entered the room, a giant machine came into view, taking up much of the space.", 
+"My prized possession. A time machine!", 
+"I could only gape.",
+"Now, for business. This little machine of mine has allowed me to travel throughout time, however it began to have some trouble recently. Some research has allowed me to discover an anomaly.",
+"Working on finding where the anomaly allowed me to find a message, however it's frustratingly encoded.",
+"That is where you come in! I apologize if this is a lot to take in but you are integral to saving the world!",
+"...",
+"Hand me the paper.",
+"Elliot looked at me in surprise, then happiness filled his face.",
+"Good luck, friend. The fate of the world rests in your hands."]
 # Shows which text box is currently in use
 var page = 0
 
