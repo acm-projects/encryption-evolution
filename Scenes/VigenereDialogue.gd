@@ -1,7 +1,24 @@
 extends RichTextLabel
 
 # Array for the different text boxes
-var dialogue = ["Well, I arrived, as requested. The note said nothing about the specifics, though. Where exactly do I go?", "Suddenly, it seemed like the world got darker. As I turned around, I found out why. A giant figure blocked my path, looming over me.","I see you got our message?", "!!! How exactly did a giant elephant sneak up on me?", "Are you the one I needed to see? What was the point of encrypting a call for help?", "He looked confused and, for a second, I thought that somehow we were both looking for the wrong people. Suddenly, he began to laugh.", "It’s elementary, friend! How could I be a secret agent without using secret messages?", "What.", "My look of confusion elicited another laugh from him as he took my arm and began to lead me somewhere.", "Yes, yes. A very hush hush organization, so keep your voice down. The name's Elliot by the way.", "I don't know why he told me to keep quiet when his voice is the only thing booming here. At least the library was empty.", "Eventually, we stand before a boring old door.", "Is this a joke? This is pretty shady-", "My voice trails off as Elliot opens the door, revealing a completely different decor. Machinery lines the wall and countless scientific notes are scattered on the ground.", "Pardon the mess, I didn't expect you to come here so fast.", "Is this what you needed help on? Cleaning your secret room?", "Elliot looks at me sadly, the mirth gone in his eyes.", "I wish that were the case. You see, our world might be in danger.", "He gestures to a machine I didn't notice before.","This, my friend, is a time machine. A little pet project of mine, I was able to peer into the past.", "However, a few days ago the machine malfunctioned. Thankfully no one was hurt, at least in the present, but I believe something went awry in the past. There are always going to be people who wish to mess with timelines.","I've been putting research into where the anomaly is and I was finally able to uncover an encrypted message that I unfortunately can't decode alone.","This is a lot to take in, I know. But I needed someone familiar enough with ciphers to help me fix this problem before something terrible happens.","He looked apologetically at me. I don't really have a choice in this matter, huh.","Show me the encrypted message.","Elliot looked at me, relieved by my words as he shuffled through papers, eventually handing me another paper of gibberish.","Now let's see, which cipher could this be..."]
+var dialogue = ["Henry III, huh. That's a French king, right?", 
+"Elliot looked at me confused for a second, then rushed over to the time machine.",
+"Give me a moment, then...a few adjustments to these gears, and... Voila! 16th century France ho!",
+"And that's how we got here, in a French palace hundreds of years in the past.", 
+"Hello? Is anyone home?", 
+"I don't know why I called out. I can't speak French and our futuristic clothes would make us stick out like a sore thumb.", 
+"There was no reason to fear being conspicuous, though. We haven't encountered a single soul as we wandered aimlessly through the palace.", 
+"After a few more minutes of walking down endless halls, Elliot speaks up.", 
+"Hold up. I believe I can feel an anomaly.", 
+"He was right. I could feel something...strange ahead of us, almost like there was something wrong.", 
+"As we moved a little further, the feeling got worse. Eventually it became a pain throughout my entire body, like it was going to tear me apart.", 
+"Elliot winced as he pulled out a small remote, similar in appearance to the time machine we used.", 
+"A time rift. Probably caused by negligence of another time traveler.", 
+"He points the remote of a space in front of us, suddenly creating a strange tear in the fabric of reality.", 
+"Quickly now! I need you to decipher this code! It should be able to stitch up the rift once solved!", 
+"Elliot tosses the remote to me and I fumble to grab it, my hands shaking with worry.", 
+"I take a deep breath, trying to calm my nerves.", 
+"There's no time to be nervous. It's time to save the world."]
 # Shows which text box is currently in use
 var page = 0
 
