@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CCLogo.png-716b96ee52f94057b86f6c2f953039f8.stex"
+path="res://.import/CCLogo.png-48320d7202001d7d6bf82a5b51176a27.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Logos/CCLogo.png"
-dest_files=[ "res://.import/CCLogo.png-716b96ee52f94057b86f6c2f953039f8.stex" ]
+source_file="res://Assets/Icons/CCLogo.png"
+dest_files=[ "res://.import/CCLogo.png-48320d7202001d7d6bf82a5b51176a27.stex" ]
 
 [params]
 

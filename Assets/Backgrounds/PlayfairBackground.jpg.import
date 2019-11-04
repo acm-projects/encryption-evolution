@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-9ecc599b6940aa90ca4e52787c2bcc07.stex"
+path="res://.import/PlayfairBackground.jpg-51d7bd35aa18917c9211401891441c7e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/icon.png"
-dest_files=[ "res://.import/icon.png-9ecc599b6940aa90ca4e52787c2bcc07.stex" ]
+source_file="res://Assets/Backgrounds/PlayfairBackground.jpg"
+dest_files=[ "res://.import/PlayfairBackground.jpg-51d7bd35aa18917c9211401891441c7e.stex" ]
 
 [params]
 
