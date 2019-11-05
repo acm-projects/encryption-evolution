@@ -28,4 +28,4 @@ func _on_Timer_timeout():
 
 
 func _on_NextScene_pressed():
-	get_tree().change_scene("res://Scenes/Playfair_Prologue.tscn")
+	get_tree().change_scene("res://Scenes/Playfair/Playfair_Prologue.tscn")
