@@ -9,7 +9,7 @@ var encryptor = null # encryptor object to call for the decrypted message variab
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	encryptor = load("res://CaesarEncryptor.gd").new()
+	$Next.visible = false
 	set_physics_process(true)
 	set_process_input(true) 
 	wheel.set_meta("_edit_lock_", true)
@@ -42,8 +42,8 @@ func _process(delta):
 # checks if entered message is correctly encrypted
 # called when the last letter of the word (D) is entered (see line 151) (should optimize later)
 func _check_Encrypted():
-	var encryptedMessage = self.encryptor._getEncryptedMessage()
-	
+	var encryptedMessage = get_tree().get_root().get_node("CaesarCipher").find_node("Messages")._getEncryptedMessage()
+		
 	var enteredMessage = ""
 	
 	for i in range(label_dict.size()):       # combines every "Blank"'s text into one string
@@ -52,8 +52,10 @@ func _check_Encrypted():
 		enteredMessage += theLetter
 	
 	if (enteredMessage == encryptedMessage):
-		get_tree().get_root().get_node("CaesarCipher").find_node("NextArrow").visible = true # Shows green arrow
-
+		get_tree().get_root().get_node("CaesarCipher").get_node("Messages").find_node("DecryptedMsg").set_text("")
+		$Next.visible = true
+		$Backspace.visible = false
+		$GoButton.visible = false
 
 # all of these funtions allow the letter buttons to function. They change the appropriate
 # text field to the button value and then increment the couter of the number of buttons pressed.
@@ -214,3 +216,6 @@ func _on_M_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("M");
 		num_letters_pressed = num_letters_pressed + 1
+
+func _on_Next_pressed():
+	get_tree().change_scene("res://Scenes/Caesar/Level1Tutorial2.tscn")

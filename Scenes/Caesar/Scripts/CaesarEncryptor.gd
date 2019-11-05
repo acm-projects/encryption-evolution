@@ -9,17 +9,17 @@ const DECRYPTED_MESSAGE = "HELLOWORLD"
 var ENCRYPTED_MESSAGE = ""
 var KEY = 0
 
-func _init():
+func _ready():
 	rng.randomize()
 	var tempKey = rng.randi_range(1, 26)
+	
+	$KeyLabel.set_text("Key Hint:\nInner A\nOuter " + _changeLetter('A', tempKey, 1))
+	
 	ENCRYPTED_MESSAGE = _encryptor(DECRYPTED_MESSAGE, tempKey)
 	KEY = 26 - tempKey
 	print(KEY)                           # Currently the only way to tell what the key is until a label can be put onscreen
 	print("Encrypted: "+ENCRYPTED_MESSAGE) # For if you don't actually feel like decoding it (developer mode!)
-	
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
+
 	
 func _getEncryptedMessage():
 	return ENCRYPTED_MESSAGE

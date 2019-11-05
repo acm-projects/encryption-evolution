@@ -16,7 +16,13 @@ func _ready():
 	wheel.set_meta("_edit_lock_", true)
 	label_dict = {0: "Blank1", 1: "Blank2", 2: "Blank3", 3: "Blank4", 4: "Blank5", 5: "Blank6", 6: "Blank7", 7: "Blank8"}
 	
+func _process(delta):
+	if (num_letters_pressed > 7):
+		num_letters_pressed = 7
 	
+	if (num_letters_pressed < 0):
+		num_letters_pressed = 0
+
 
 # capturing mouse click on spinner
 # warning-ignore:unused_argument
