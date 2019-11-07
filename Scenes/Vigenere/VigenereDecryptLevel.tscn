@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Scripts/VigenereDecryptLevel.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Vigenere/VigenereDecryptLevel.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Backgrounds/VigenereBackground.jpg" type="Texture" id=2]
 [ext_resource path="res://Assets/Fonts/cnr.otf" type="DynamicFontData" id=3]
-[ext_resource path="res://Scripts/VigenereEncryptorDecryptor.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Vigenere/VigenereEncryptorDecryptor.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
