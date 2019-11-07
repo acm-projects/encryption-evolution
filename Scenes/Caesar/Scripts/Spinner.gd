@@ -1,210 +1,289 @@
 extends Area2D
 
-onready var wheel = get_node("OuterWheel") # variable containing the outer wheel sprite that can rotate
-var input_angle = 0 # the angle that the user inputs based on the key that they input
+onready var wheel = get_node("OuterWheel")
+var torque_damp = 0.90 # slow down spinner
+var torque = 0 # apply force to spinner
+var held = false
+var clockwise = false
+var temp_add_rot = 0 # angle offset when holding spinner
+var mouse_speed = 0
+var mouse_last_pos = Vector2()
+var mouse_timer = 0
+var key = 0
+var stop_angle = 0
 var num_letters_pressed = 0 # how many letters have been entered, AKA how many buttons have been pressed
-var label_dict # dictionary from number of letters pressed to label to be populated
-var encryptor = null # encryptor object to call for the decrypted message variable
+var label_dict
+var locked_message = "Locked!"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	encryptor = load("res://CaesarEncryptor2.gd").new()
+	randomize()
+	key = randi()%27 + 1
+	locked_message = locked_message + "\nKey = " + str(key)
 	set_physics_process(true)
-	set_process_input(true) 
-	wheel.set_meta("_edit_lock_", true)
-	label_dict = {0: "Blank1", 1: "Blank2", 2: "Blank3", 3: "Blank4", 4: "Blank5", 5: "Blank6",
-	 6: "Blank7", 7: "Blank8", 8: "Blank9", 9: "Blank10", 10: "Blank11", 11: "Blank12", 12: "Blank13",
-	 13: "Blank14", 14: "Blank15", 15: "Blank16", 16: "Blank17", 17: "Blank18", 18: "Blank19", 19: "Blank20",
-	 20: "Blank21", 21: "Blank22", 22: "Blank23"}
+	set_process_input(true)
+	wheel.set_meta("_edit_lock_", false)
+	wheel.set_meta("_key_", key)
+	print(key)
+	label_dict = {0: "Blank1", 1: "Blank2", 2: "Blank3", 3: "Blank4", 4: "Blank5", 5: "Blank6", 6: "Blank7", 7: "Blank8", 8: "Blank9", 9: "Blank10", 10: "Blank11", 11: "Blank12", 12: "Blank13", 13: "Blank14", 14: "Blank15", 15: "Blank16"}
+	stop_angle = ((2*PI) / 26) * key
 
 # capturing mouse click on spinner
 func _on_Spinner_input_event(viewport, event, shape_idx):
 	if event.is_action("lmb"):
+		held = event.is_action_pressed("lmb")
+		torque = 0
+		temp_add_rot = wheel.get_rotation() - wheel.get_position().angle_to_point(get_local_mouse_position())
+
+func _input(event):
+	if event.is_action_type() and not event.is_action_pressed("lmb"):
+		held = false
+		spin(mouse_speed / 5)
+	elif event.is_action_type() and event.is_action_pressed("lmb"):
+		held = true;
+
+# sprite look at mouse
+func point():
+	var rot = wheel.get_rotation()
+	wheel.set_rotation(wheel.get_position().angle_to_point(get_local_mouse_position()) + temp_add_rot)
+	if rot > wheel.get_rotation():
+		clockwise = true
+	else:
+		clockwise = false
+
+func spin(amt):
+	torque += amt
+
+func _physics_process(delta):
+	if abs(fmod(wheel.get_rotation(), 2*PI) - stop_angle) < .01:
 		wheel.set_meta("_edit_lock_", true)
+		get_tree().get_root().get_node("CaesarCipher").find_node("Locked").set_text(locked_message);
+	if not wheel.get_meta("_edit_lock_"):
+		mouse_timer += delta
+		if mouse_timer > 0.2:
+			mouse_speed = (mouse_speed + mouse_last_pos.distance_to(get_global_mouse_position())) / 2
+			mouse_last_pos = get_global_mouse_position()
+			mouse_timer = 0
+		if held:
+			point()
+		else:
+			if torque > 0.05:
+				var new_rot = wheel.get_rotation()
+				if clockwise:
+					new_rot -= torque * delta
+				else:
+					new_rot += torque * delta
+				torque *= torque_damp
+				wheel.set_rotation(new_rot)
+			else:
+				torque = 0
 
-# sets the rotation of the spinner to the required offset entered by the user
-func _on_GoButton_pressed():
-	input_angle = get_tree().get_root().get_node("CaesarCipher").find_node("ShiftAmountField").get_value()
-	input_angle = ((2*PI) / 26) * input_angle
-	wheel.set_rotation(input_angle)
-
-# deletes the last entered letter by decrementing num_letters_pressed and returning the corresponding text field to "_"
 func _on_Backspace_pressed():
-	if num_letters_pressed > 10: # TODO Use variable size instead of hard coding
-		num_letters_pressed = 10
-	num_letters_pressed = num_letters_pressed - 1
-	get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank10")).set_text("_")
+	if num_letters_pressed > 0:
+		num_letters_pressed = num_letters_pressed - 1
+	get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed)).set_text("_")
 
-func _process(delta):
-	_check_Encrypted()
-
-# checks if entered message is correctly encrypted
-# called when the last letter of the word (D) is entered (see line 151) (should optimize later)
-func _check_Encrypted():
-	var encryptedMessage = self.encryptor._getEncryptedMessage()
-	
-	var enteredMessage = ""
-	
-	for i in range(label_dict.size()):       # combines every "Blank"'s text into one string
-		var theBlank = label_dict.get(i)
-		var theLetter = get_tree().get_root().get_node("CaesarCipher").find_node(theBlank).text
-		enteredMessage += theLetter
-	
-	if (enteredMessage == encryptedMessage):
-		get_tree().get_root().get_node("CaesarCipher").find_node("NextArrow").visible = true # Shows green arrow
-
-# all of these funtions allow the letter buttons to function. They change the appropriate
-# text field to the button value and then increment the couter of the number of buttons pressed.
 func _on_A_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("A");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 func _on_N_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("N");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 func _on_R_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("R");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_S_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("S");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_T_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("T");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_U_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("U");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_W_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("W");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_X_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("X");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_Y_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("Y");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_Z_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("Z");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_O_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("O");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_P_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("P");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_Q_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("Q");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_V_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("V");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_B_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("B");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_C_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("C");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_D_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("D");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_E_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("E");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_F_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("F");
-		num_letters_pressed = num_letters_pressed + 1
-		_check_Encrypted() # Checks if entered message is correctly encrypted
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_G_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("G");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_H_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("H");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_I_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("I");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_J_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("J");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_K_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("K");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_L_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("L");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1
 
 
 func _on_M_pressed():
 	if wheel.get_meta("_edit_lock_") == true:
+		torque = 0
 		get_tree().get_root().get_node("CaesarCipher").find_node(label_dict.get(num_letters_pressed, "Blank7")).set_text("M");
-		num_letters_pressed = num_letters_pressed + 1
+		if num_letters_pressed < label_dict.size():
+			num_letters_pressed = num_letters_pressed + 1

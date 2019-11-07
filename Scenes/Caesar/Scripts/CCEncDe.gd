@@ -5,6 +5,7 @@ var ALPHA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	pass
 
 func _changeLetter(letter, shift, type):

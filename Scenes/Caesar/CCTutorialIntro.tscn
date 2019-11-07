@@ -1,34 +1,90 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=34 format=2]
 
-[ext_resource path="res://Scripts/CCDecryptTutorial.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Backgrounds/CeaserBackground.jpg" type="Texture" id=2]
-[ext_resource path="res://Scripts/CCEncDe.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/TutorialSpinnerDecrypt.gd" type="Script" id=4]
-[ext_resource path="res://Assets/Textures/cipher-wheel-bottom2.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Fonts/cnr.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/Backgrounds/CeaserBackground.jpg" type="Texture" id=1]
+[ext_resource path="res://Assets/Fonts/cnr.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Textures/cipher-wheel-bottom2.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Caesar/Scripts/CCTutorialIntro.gd" type="Script" id=4]
 
-[sub_resource type="StyleBoxTexture" id=1]
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxTexture" id=2]
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxTexture" id=3]
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxTexture" id=4]
+[sub_resource type="DynamicFont" id=4]
+size = 50
+font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxTexture" id=5]
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 2 )
 
-[sub_resource type="Theme" id=6]
+[sub_resource type="DynamicFont" id=6]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=14]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=15]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=16]
+
+[sub_resource type="StyleBoxTexture" id=17]
+
+[sub_resource type="StyleBoxTexture" id=18]
+
+[sub_resource type="StyleBoxTexture" id=19]
+
+[sub_resource type="StyleBoxTexture" id=20]
+
+[sub_resource type="Theme" id=21]
 Button/colors/font_color = Color( 0, 0, 0, 1 )
 Button/colors/font_color_disabled = Color( 0, 0, 0, 1 )
 Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
 Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
 Button/constants/hseparation = 2
 Button/fonts/font = null
-Button/styles/disabled = SubResource( 1 )
-Button/styles/focus = SubResource( 2 )
-Button/styles/hover = SubResource( 3 )
-Button/styles/normal = SubResource( 4 )
-Button/styles/pressed = SubResource( 5 )
+Button/styles/disabled = SubResource( 16 )
+Button/styles/focus = SubResource( 17 )
+Button/styles/hover = SubResource( 18 )
+Button/styles/normal = SubResource( 19 )
+Button/styles/pressed = SubResource( 20 )
 CheckBox/colors/font_color = Color( 0, 0, 0, 1 )
 CheckBox/colors/font_color_disabled = Color( 0, 0, 0, 1 )
 CheckBox/colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -430,76 +486,199 @@ WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
 
-[sub_resource type="CircleShape2D" id=7]
+[sub_resource type="CircleShape2D" id=22]
 radius = 290.112
 
-[sub_resource type="DynamicFont" id=8]
-size = 17
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=9]
-size = 19
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=10]
-size = 35
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=11]
-size = 30
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=12]
-size = 30
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=13]
-size = 30
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=14]
-size = 30
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=15]
-size = 30
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=16]
-size = 30
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=17]
-size = 30
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=18]
-size = 30
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=19]
+[sub_resource type="DynamicFont" id=23]
 size = 20
-font_data = ExtResource( 6 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=24]
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=25]
+default_font = SubResource( 24 )
+
+[sub_resource type="Theme" id=26]
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.741176, 0.368627, 0.0980392, 1 )
+border_color = Color( 0.0431373, 0.0431373, 0.0196078, 1 )
+
+[sub_resource type="DynamicFont" id=28]
+size = 45
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=29]
+size = 25
+font_data = ExtResource( 2 )
 
 [node name="CaesarCipher" type="Node"]
-script = ExtResource( 1 )
+editor/display_folded = true
 
 [node name="Background" type="Sprite" parent="."]
-show_behind_parent = true
-position = Vector2( 520.263, 301.468 )
-scale = Vector2( 1.11754, 1.16546 )
-texture = ExtResource( 2 )
+position = Vector2( 506.582, 297.462 )
+scale = Vector2( 1.15, 1.15 )
+texture = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Messages" type="Control" parent="."]
+editor/display_folded = true
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="DecryptedMsg" type="Label" parent="Messages"]
+margin_left = 630.027
+margin_top = 230.017
+margin_right = 900.027
+margin_bottom = 281.017
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.890196, 0.878431, 0.878431, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "HELLOWORLD"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="KeyLabel" type="Label" parent="Messages"]
+margin_left = 190.121
+margin_top = 247.549
+margin_right = 441.121
+margin_bottom = 328.549
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Key Hint"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="TypedMsg" type="VBoxContainer" parent="Messages"]
+editor/display_folded = true
+margin_left = 607.816
+margin_top = 286.042
+margin_right = 918.816
+margin_bottom = 341.042
+alignment = 1
+
+[node name="LetterRow1" type="HBoxContainer" parent="Messages/TypedMsg"]
+margin_top = 2.0
+margin_right = 311.0
+margin_bottom = 53.0
+alignment = 1
+
+[node name="Blank1" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 2.0
+margin_right = 29.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank2" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 33.0
+margin_right = 60.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank3" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 64.0
+margin_right = 91.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank4" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 95.0
+margin_right = 122.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank5" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 126.0
+margin_right = 153.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank6" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 157.0
+margin_right = 184.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank7" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 188.0
+margin_right = 215.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank8" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 219.0
+margin_right = 246.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank9" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 250.0
+margin_right = 277.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank10" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 281.0
+margin_right = 308.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
 [node name="Spinner" type="Node" parent="."]
-script = ExtResource( 3 )
 
 [node name="SpinnerArea" type="Area2D" parent="Spinner"]
-editor/display_folded = true
 position = Vector2( 310.392, 300.137 )
-script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Next" type="Button" parent="Spinner/SpinnerArea"]
+margin_left = 365.415
+margin_top = -80.5585
+margin_right = 559.415
+margin_bottom = -19.5585
+custom_fonts/font = SubResource( 13 )
+text = "Next Tutorial"
+
+[node name="GoButton" type="Button" parent="Spinner/SpinnerArea"]
+margin_left = 333.58
+margin_top = -154.785
+margin_right = 391.58
+margin_bottom = -127.785
+custom_fonts/font = SubResource( 14 )
+text = "Spin"
+
+[node name="Backspace" type="Button" parent="Spinner/SpinnerArea"]
+margin_left = 563.287
+margin_top = 50.2204
+margin_right = 621.287
+margin_bottom = 76.2202
+custom_fonts/font = SubResource( 15 )
+text = "Back"
 
 [node name="InnerWheel" type="TextureRect" parent="Spinner/SpinnerArea"]
 margin_left = -234.504
@@ -507,17 +686,15 @@ margin_top = -233.294
 margin_right = 365.496
 margin_bottom = 366.706
 rect_scale = Vector2( 0.78, 0.78 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="OuterWheel" type="Sprite" parent="Spinner/SpinnerArea"]
+editor/display_folded = true
 scale = Vector2( 0.95, 0.95 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
+texture = ExtResource( 3 )
 
 [node name="A" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
 margin_left = -63.0
@@ -525,7 +702,7 @@ margin_top = -291.0
 margin_right = -4.0
 margin_bottom = -248.0
 rect_rotation = -6.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -537,7 +714,7 @@ margin_top = -298.0
 margin_right = 65.0
 margin_bottom = -255.0
 rect_rotation = 8.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -549,7 +726,7 @@ margin_top = -287.0
 margin_right = 137.0
 margin_bottom = -244.0
 rect_rotation = 21.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -561,7 +738,7 @@ margin_top = -258.0
 margin_right = 204.0
 margin_bottom = -215.0
 rect_rotation = 34.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -573,7 +750,7 @@ margin_top = -216.0
 margin_right = 263.0
 margin_bottom = -173.0
 rect_rotation = 50.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -585,7 +762,7 @@ margin_top = -162.0
 margin_right = 309.0
 margin_bottom = -119.0
 rect_rotation = 63.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -597,7 +774,7 @@ margin_top = -96.0
 margin_right = 342.0
 margin_bottom = -52.0
 rect_rotation = 78.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -609,7 +786,7 @@ margin_top = -28.0
 margin_right = 357.0
 margin_bottom = 16.0
 rect_rotation = 91.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -621,7 +798,7 @@ margin_top = 44.0
 margin_right = 355.0
 margin_bottom = 88.0
 rect_rotation = 105.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -633,7 +810,7 @@ margin_top = 116.0
 margin_right = 336.0
 margin_bottom = 160.0
 rect_rotation = 120.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -645,7 +822,7 @@ margin_top = 176.0
 margin_right = 301.0
 margin_bottom = 220.0
 rect_rotation = 131.61
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -657,7 +834,7 @@ margin_top = 228.0
 margin_right = 252.0
 margin_bottom = 272.0
 rect_rotation = 145.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -669,7 +846,7 @@ margin_top = 269.0
 margin_right = 191.0
 margin_bottom = 313.0
 rect_rotation = 160.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -681,7 +858,7 @@ margin_top = 290.999
 margin_right = 123.0
 margin_bottom = 334.999
 rect_rotation = 173.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -693,7 +870,7 @@ margin_top = 298.999
 margin_right = 49.0001
 margin_bottom = 342.999
 rect_rotation = 188.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -705,7 +882,7 @@ margin_top = 287.999
 margin_right = -21.9999
 margin_bottom = 331.999
 rect_rotation = 202.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -717,7 +894,7 @@ margin_top = 259.999
 margin_right = -87.9999
 margin_bottom = 303.999
 rect_rotation = 216.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -729,7 +906,7 @@ margin_top = 216.999
 margin_right = -145.0
 margin_bottom = 260.999
 rect_rotation = 230.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -741,7 +918,7 @@ margin_top = 162.999
 margin_right = -190.0
 margin_bottom = 206.999
 rect_rotation = 243.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -753,7 +930,7 @@ margin_top = 97.9989
 margin_right = -221.0
 margin_bottom = 141.999
 rect_rotation = 256.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -765,7 +942,7 @@ margin_top = 29.0515
 margin_right = -237.0
 margin_bottom = 73.0515
 rect_rotation = 270.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -777,7 +954,7 @@ margin_top = -43.9485
 margin_right = -236.0
 margin_bottom = 0.0515442
 rect_rotation = 285.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -789,7 +966,7 @@ margin_top = -112.001
 margin_right = -217.0
 margin_bottom = -68.0011
 rect_rotation = 298.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -802,7 +979,7 @@ margin_top = -176.001
 margin_right = -182.0
 margin_bottom = -132.001
 rect_rotation = 312.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -814,7 +991,7 @@ margin_top = -226.001
 margin_right = -131.0
 margin_bottom = -182.001
 rect_rotation = 325.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
@@ -826,14 +1003,15 @@ margin_top = -268.001
 margin_right = -72.0
 margin_bottom = -224.001
 rect_rotation = 340.0
-theme = SubResource( 6 )
+theme = SubResource( 21 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
 
 [node name="SpinnerCollisionArea" type="CollisionShape2D" parent="Spinner/SpinnerArea"]
-shape = SubResource( 7 )
+position = Vector2( 0.814484, 0 )
+shape = SubResource( 22 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -845,147 +1023,57 @@ margin_right = 393.0
 margin_bottom = 420.0
 valign = 1
 
-[node name="Control" type="Control" parent="Spinner"]
-margin_right = 40.0
-margin_bottom = 40.0
-
 [node name="ShiftAmountPrompt" type="Label" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -398.339
-margin_top = 89.9422
-margin_right = -227.339
-margin_bottom = 128.942
-custom_fonts/font = SubResource( 8 )
-custom_colors/font_color = Color( 0.87451, 0.807843, 0.807843, 1 )
+margin_left = -453.671
+margin_top = 70.7305
+margin_right = -244.671
+margin_bottom = 115.73
+custom_fonts/font = SubResource( 23 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Enter shift amount:"
 align = 1
 valign = 1
-autowrap = true
 
-[node name="GoButton" type="Button" parent="."]
-margin_left = 773.742
-margin_top = 136.084
-margin_right = 836.742
-margin_bottom = 164.084
-custom_fonts/font = SubResource( 9 )
-text = "GO!"
+[node name="ShiftAmountField" type="SpinBox" parent="."]
+margin_left = 634.993
+margin_top = 104.615
+margin_right = 725.993
+margin_bottom = 135.615
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource( 25 )
+max_value = 25.0
+align = 1
 
-[node name="Encrypted Message" type="Label" parent="."]
-margin_left = 624.0
-margin_top = 208.0
-margin_right = 1012.0
-margin_bottom = 281.0
-custom_fonts/font = SubResource( 10 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "HEllo
-"
+[node name="Tutorial Help" type="Label" parent="."]
+editor/display_folded = true
+margin_left = 58.9734
+margin_top = 76.5757
+margin_right = 968.973
+margin_bottom = 473.576
+theme = SubResource( 26 )
+custom_styles/normal = SubResource( 27 )
+custom_fonts/font = SubResource( 28 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 align = 1
 valign = 1
 autowrap = true
+script = ExtResource( 4 )
 
-[node name="ShiftAmountField" type="SpinBox" parent="."]
-margin_left = 773.336
-margin_top = 88.9981
-margin_right = 853.336
-margin_bottom = 124.998
-max_value = 25.0
-
-[node name="Decrypted Message" type="VBoxContainer" parent="."]
-editor/display_folded = true
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -410.043
-margin_top = -295.344
-margin_right = -19.0427
-margin_bottom = -176.344
-
-[node name="LetterRow1" type="HBoxContainer" parent="Decrypted Message"]
-margin_right = 391.0
-margin_bottom = 31.0
-alignment = 1
-
-[node name="Blank1" type="Label" parent="Decrypted Message/LetterRow1"]
-margin_left = 145.0
-margin_right = 162.0
-margin_bottom = 31.0
-custom_fonts/font = SubResource( 11 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "_"
-
-[node name="Blank2" type="Label" parent="Decrypted Message/LetterRow1"]
-margin_left = 166.0
-margin_right = 183.0
-margin_bottom = 31.0
-custom_fonts/font = SubResource( 12 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "_"
-
-[node name="Blank3" type="Label" parent="Decrypted Message/LetterRow1"]
-margin_left = 187.0
-margin_right = 204.0
-margin_bottom = 31.0
-custom_fonts/font = SubResource( 13 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "_"
-
-[node name="Blank4" type="Label" parent="Decrypted Message/LetterRow1"]
-margin_left = 208.0
-margin_right = 225.0
-margin_bottom = 31.0
-custom_fonts/font = SubResource( 14 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "_"
-
-[node name="Blank5" type="Label" parent="Decrypted Message/LetterRow1"]
-margin_left = 229.0
-margin_right = 246.0
-margin_bottom = 31.0
-custom_fonts/font = SubResource( 15 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "_"
-
-[node name="LetterRow2" type="HBoxContainer" parent="Decrypted Message"]
-margin_top = 35.0
-margin_right = 391.0
-margin_bottom = 66.0
-alignment = 1
-
-[node name="Blank6" type="Label" parent="Decrypted Message/LetterRow2"]
-margin_left = 166.0
-margin_right = 183.0
-margin_bottom = 31.0
-custom_fonts/font = SubResource( 16 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "_"
-
-[node name="Blank7" type="Label" parent="Decrypted Message/LetterRow2"]
-margin_left = 187.0
-margin_right = 204.0
-margin_bottom = 31.0
-custom_fonts/font = SubResource( 17 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "_"
-
-[node name="Blank8" type="Label" parent="Decrypted Message/LetterRow2"]
-margin_left = 208.0
-margin_right = 225.0
-margin_bottom = 31.0
-custom_fonts/font = SubResource( 18 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "_"
-
-[node name="Backspace" type="Button" parent="."]
-margin_left = 873.832
-margin_top = 338.333
-margin_right = 954.832
-margin_bottom = 369.333
-custom_fonts/font = SubResource( 19 )
-text = "Back"
+[node name="Continue" type="Button" parent="Tutorial Help"]
+margin_left = 701.0
+margin_top = 295.0
+margin_right = 875.0
+margin_bottom = 367.0
+custom_fonts/font = SubResource( 29 )
+text = "Continue"
 [connection signal="input_event" from="Spinner/SpinnerArea" to="Spinner/SpinnerArea" method="_on_Spinner_input_event"]
 [connection signal="item_rect_changed" from="Spinner/SpinnerArea" to="Spinner/SpinnerArea" method="_on_SpinnerArea_item_rect_changed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/Next" to="Spinner/SpinnerArea" method="_on_Next_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/GoButton" to="Spinner/SpinnerArea" method="_on_GoButton_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/Backspace" to="Spinner/SpinnerArea" method="_on_Backspace_pressed"]
 [connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/A" to="Spinner/SpinnerArea" method="_on_A_pressed"]
 [connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/B" to="Spinner/SpinnerArea" method="_on_B_pressed"]
 [connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/C" to="Spinner/SpinnerArea" method="_on_C_pressed"]
@@ -1012,5 +1100,4 @@ text = "Back"
 [connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/X" to="Spinner/SpinnerArea" method="_on_X_pressed"]
 [connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/Y" to="Spinner/SpinnerArea" method="_on_Y_pressed"]
 [connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/Z" to="Spinner/SpinnerArea" method="_on_Z_pressed"]
-[connection signal="pressed" from="GoButton" to="Spinner/SpinnerArea" method="_on_GoButton_pressed"]
-[connection signal="pressed" from="Backspace" to="Spinner/SpinnerArea" method="_on_Backspace_pressed"]
+[connection signal="pressed" from="Tutorial Help/Continue" to="Tutorial Help" method="_on_Continue_pressed"]
