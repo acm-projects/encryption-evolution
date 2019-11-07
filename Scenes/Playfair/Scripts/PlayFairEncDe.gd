@@ -175,7 +175,7 @@ func _encryptMessage(key, message):
 			
 		i += 2
 		
-	print(hidden, "\n") #DEBUG STATEMENT
+	# print(hidden, "\n") #DEBUG STATEMENT
 	return hidden
 	
 #Find the letter in the Encrypt Grid

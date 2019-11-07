@@ -21,6 +21,7 @@ var modComplete = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$ContinueButton.visible = false
 	pass
 
 # this checks that the user entered the current step correctly and then resets that step if it is incorrect
@@ -63,6 +64,8 @@ func _on_Continue_pressed():
 		else:
 			get_tree().get_root().get_node("VigenereHowToDecrypt").find_node("TextBox").set_text(dialogue[dialogueIndex])
 			dialogueIndex = dialogueIndex + 1
+	else:
+		$ContinueButton.visible = true
 
 
 func _on_ResetCurrentStep_pressed():
@@ -486,3 +489,8 @@ func _on_ZButton_pressed():
 	label.set_text(currText)
 	index = index + 1
 	totalIndex = totalIndex + 1
+	
+	
+
+func _on_ContinueButton_pressed():
+	get_tree().change_scene("res://Scenes/Vigenere/VigenereDecryptLevel.tscn")

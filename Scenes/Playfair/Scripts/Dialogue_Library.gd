@@ -19,6 +19,8 @@ func _input(event):
 				page += 1
 				set_bbcode(dialogue[page])
 				set_visible_characters(0)
+			else:
+				get_tree().change_scene("res://Scenes/Playfair/PlayfairHowTo.tscn")
 
 # Auto-scrolls text
 func _on_Timer_timeout():

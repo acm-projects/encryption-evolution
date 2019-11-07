@@ -59,11 +59,7 @@ func _on_00_pressed():
 	
 		index += 1
 		outIndex += 1
-		_index()	
-	
-	userText[index] = ( $"Col1/R0C0".get_text() )
-	userTextOut[outIndex] = ( $"Col1/R0C0".get_text() )
-	
+		_index()
 
 func _on_10_pressed():
 	
