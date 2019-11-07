@@ -404,9 +404,18 @@ margin_left = 836.474
 margin_top = 153.21
 margin_right = 996.474
 margin_bottom = 198.21
-rect_pivot_offset = Vector2( 368.263, 33.954 )
+rect_pivot_offset = Vector2( 103.526, 26.79 )
 custom_fonts/font = SubResource( 9 )
 text = "Clear"
+
+[node name="ContinueButton" type="Button" parent="."]
+margin_left = 741.526
+margin_top = 523.947
+margin_right = 1002.53
+margin_bottom = 589.947
+rect_pivot_offset = Vector2( 103.526, 26.79 )
+custom_fonts/font = SubResource( 9 )
+text = "Continue"
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/AControl/AButton" to="." method="_on_AButton_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/BControl/BButton" to="." method="_on_BButton_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/CControl/CButton" to="." method="_on_CButton_pressed"]
@@ -434,3 +443,4 @@ text = "Clear"
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/YControl/YButton" to="." method="_on_YButton_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/ZControl/ZButton" to="." method="_on_ZButton_pressed"]
 [connection signal="pressed" from="ClearButton" to="." method="_on_ClearButton_pressed"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]

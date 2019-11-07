@@ -14,6 +14,7 @@ var canContinue = false # when true, allows user to move on to decrypting the tr
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$ContinueButton.visible = false
 	encMessage = $ConvertToNum/Message._encryptor(origMessage, key)
 	_on_ClearButton_pressed()     # Sets all variables to default values
 	pass
@@ -54,6 +55,7 @@ func checkDecrypted():
 		if (userMessage == origMessage):
 			$ScreenPrompt.set_text("Beau Travail!")
 			$Translation.set_text("[Great job!]")
+			$ContinueButton.visible = true
 		else:
 			$ScreenPrompt.set_text("So close! Try again!")
 	
@@ -507,3 +509,7 @@ func _on_ZButton_pressed():
 	label.set_text(currText)
 	index = index + 1
 	totalIndex = totalIndex + 1
+
+
+func _on_ContinueButton_pressed():
+	get_tree().change_scene("res://Scenes/Vigenere/EndOfDemo.tscn")
