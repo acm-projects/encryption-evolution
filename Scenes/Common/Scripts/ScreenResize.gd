@@ -20,5 +20,4 @@ func window_resize():
     if new_size.x < minimum_size.x:
         scale_factor = minimum_size.x/new_size.x
         new_size = Vector2(minimum_size.x, new_size.y*scale_factor)
-
     viewport.set_size_override(true, new_size)
