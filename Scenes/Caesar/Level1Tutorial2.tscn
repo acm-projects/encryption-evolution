@@ -1,0 +1,1156 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Assets/Backgrounds/CeaserBackground.jpg" type="Texture" id=1]
+[ext_resource path="res://Scenes/Caesar/Scripts/CaesarEncryptor2.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Fonts/cnr.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scenes/Caesar/Scripts/TutorialSpinner2.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Textures/cipher-wheel-bottom2.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=6]
+default_font = SubResource( 5 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=8]
+default_font = SubResource( 7 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=10]
+default_font = SubResource( 9 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=12]
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxTexture" id=13]
+
+[sub_resource type="StyleBoxTexture" id=14]
+
+[sub_resource type="StyleBoxTexture" id=15]
+
+[sub_resource type="StyleBoxTexture" id=16]
+
+[sub_resource type="StyleBoxTexture" id=17]
+
+[sub_resource type="Theme" id=18]
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = SubResource( 13 )
+Button/styles/focus = SubResource( 14 )
+Button/styles/hover = SubResource( 15 )
+Button/styles/normal = SubResource( 16 )
+Button/styles/pressed = SubResource( 17 )
+CheckBox/colors/font_color = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_hover = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_hover_pressed = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+CheckBox/constants/check_vadjust = 0
+CheckBox/constants/hseparation = 4
+CheckBox/fonts/font = null
+CheckBox/icons/checked = null
+CheckBox/icons/radio_checked = null
+CheckBox/icons/radio_unchecked = null
+CheckBox/icons/unchecked = null
+CheckBox/styles/disabled = null
+CheckBox/styles/focus = null
+CheckBox/styles/hover = null
+CheckBox/styles/hover_pressed = null
+CheckBox/styles/normal = null
+CheckBox/styles/pressed = null
+CheckButton/colors/font_color = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_hover_pressed = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+CheckButton/constants/check_vadjust = 0
+CheckButton/constants/hseparation = 4
+CheckButton/fonts/font = null
+CheckButton/icons/off = null
+CheckButton/icons/on = null
+CheckButton/styles/disabled = null
+CheckButton/styles/focus = null
+CheckButton/styles/hover = null
+CheckButton/styles/hover_pressed = null
+CheckButton/styles/normal = null
+CheckButton/styles/pressed = null
+ColorPicker/constants/h_width = 30
+ColorPicker/constants/label_width = 10
+ColorPicker/constants/margin = 4
+ColorPicker/constants/sv_height = 256
+ColorPicker/constants/sv_width = 256
+ColorPicker/icons/add_preset = null
+ColorPicker/icons/color_hue = null
+ColorPicker/icons/color_sample = null
+ColorPicker/icons/preset_bg = null
+ColorPicker/icons/screen_picker = null
+ColorPickerButton/colors/font_color = Color( 0, 0, 0, 1 )
+ColorPickerButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+ColorPickerButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+ColorPickerButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+ColorPickerButton/constants/hseparation = 2
+ColorPickerButton/fonts/font = null
+ColorPickerButton/icons/bg = null
+ColorPickerButton/styles/disabled = null
+ColorPickerButton/styles/focus = null
+ColorPickerButton/styles/hover = null
+ColorPickerButton/styles/normal = null
+ColorPickerButton/styles/pressed = null
+Dialogs/constants/button_margin = 32
+Dialogs/constants/margin = 8
+FileDialog/colors/files_disabled = Color( 0, 0, 0, 1 )
+FileDialog/icons/folder = null
+FileDialog/icons/parent_folder = null
+FileDialog/icons/reload = null
+Fonts/fonts/large = null
+Fonts/fonts/normal = null
+GraphEdit/colors/activity = Color( 0, 0, 0, 1 )
+GraphEdit/colors/grid_major = Color( 0, 0, 0, 1 )
+GraphEdit/colors/grid_minor = Color( 0, 0, 0, 1 )
+GraphEdit/constants/bezier_len_neg = 160
+GraphEdit/constants/bezier_len_pos = 80
+GraphEdit/constants/port_grab_distance_horizontal = 48
+GraphEdit/constants/port_grab_distance_vertical = 6
+GraphEdit/icons/minus = null
+GraphEdit/icons/more = null
+GraphEdit/icons/reset = null
+GraphEdit/icons/snap = null
+GraphEdit/styles/bg = null
+GraphNode/colors/close_color = Color( 0, 0, 0, 1 )
+GraphNode/colors/title_color = Color( 0, 0, 0, 1 )
+GraphNode/constants/close_offset = 18
+GraphNode/constants/port_offset = 3
+GraphNode/constants/separation = 1
+GraphNode/constants/title_offset = 20
+GraphNode/fonts/title_font = null
+GraphNode/icons/close = null
+GraphNode/icons/port = null
+GraphNode/icons/resizer = null
+GraphNode/styles/breakpoint = null
+GraphNode/styles/comment = null
+GraphNode/styles/commentfocus = null
+GraphNode/styles/defaultfocus = null
+GraphNode/styles/defaultframe = null
+GraphNode/styles/frame = null
+GraphNode/styles/position = null
+GraphNode/styles/selectedframe = null
+GridContainer/constants/hseparation = 4
+GridContainer/constants/vseparation = 4
+HBoxContainer/constants/separation = 4
+HScrollBar/icons/decrement = null
+HScrollBar/icons/decrement_highlight = null
+HScrollBar/icons/increment = null
+HScrollBar/icons/increment_highlight = null
+HScrollBar/styles/grabber = null
+HScrollBar/styles/grabber_highlight = null
+HScrollBar/styles/grabber_pressed = null
+HScrollBar/styles/scroll = null
+HScrollBar/styles/scroll_focus = null
+HSeparator/constants/separation = 4
+HSeparator/styles/separator = null
+HSlider/icons/grabber = null
+HSlider/icons/grabber_disabled = null
+HSlider/icons/grabber_highlight = null
+HSlider/icons/tick = null
+HSlider/styles/focus = null
+HSlider/styles/grabber_area = null
+HSlider/styles/grabber_disabled = null
+HSlider/styles/grabber_highlight = null
+HSlider/styles/slider = null
+HSplitContainer/constants/autohide = 1
+HSplitContainer/constants/separation = 12
+HSplitContainer/icons/grabber = null
+HSplitContainer/styles/bg = null
+Icons/icons/close = null
+Icons/icons/logo = null
+ItemList/colors/font_color = Color( 0, 0, 0, 1 )
+ItemList/colors/font_color_selected = Color( 0, 0, 0, 1 )
+ItemList/colors/guide_color = Color( 0, 0, 0, 1 )
+ItemList/constants/hseparation = 4
+ItemList/constants/icon_margin = 4
+ItemList/constants/line_separation = 2
+ItemList/constants/vseparation = 2
+ItemList/fonts/font = null
+ItemList/styles/bg = null
+ItemList/styles/bg_focus = null
+ItemList/styles/cursor = null
+ItemList/styles/cursor_unfocused = null
+ItemList/styles/selected = null
+ItemList/styles/selected_focus = null
+Label/colors/font_color = Color( 0, 0, 0, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+Label/colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+LineEdit/colors/clear_button_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/clear_button_color_pressed = Color( 0, 0, 0, 1 )
+LineEdit/colors/cursor_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
+LineEdit/colors/selection_color = Color( 0, 0, 0, 1 )
+LineEdit/constants/minimum_spaces = 12
+LineEdit/fonts/font = null
+LineEdit/icons/clear = null
+LineEdit/styles/focus = null
+LineEdit/styles/normal = null
+LineEdit/styles/read_only = null
+LinkButton/colors/font_color = Color( 0, 0, 0, 1 )
+LinkButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+LinkButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+LinkButton/constants/underline_spacing = 2
+LinkButton/fonts/font = null
+LinkButton/styles/focus = null
+MarginContainer/constants/margin_bottom = 0
+MarginContainer/constants/margin_left = 0
+MarginContainer/constants/margin_right = 0
+MarginContainer/constants/margin_top = 0
+MenuButton/colors/font_color = Color( 0, 0, 0, 1 )
+MenuButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+MenuButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+MenuButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+MenuButton/constants/hseparation = 3
+MenuButton/fonts/font = null
+MenuButton/styles/disabled = null
+MenuButton/styles/focus = null
+MenuButton/styles/hover = null
+MenuButton/styles/normal = null
+MenuButton/styles/pressed = null
+OptionButton/colors/font_color = Color( 0, 0, 0, 1 )
+OptionButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+OptionButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+OptionButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+OptionButton/constants/arrow_margin = 2
+OptionButton/constants/hseparation = 2
+OptionButton/fonts/font = null
+OptionButton/icons/arrow = null
+OptionButton/styles/disabled = null
+OptionButton/styles/focus = null
+OptionButton/styles/hover = null
+OptionButton/styles/normal = null
+OptionButton/styles/pressed = null
+Panel/styles/panel = null
+Panel/styles/panelf = null
+Panel/styles/panelnc = null
+PanelContainer/styles/panel = null
+PopupMenu/colors/font_color = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_accel = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_hover = Color( 0, 0, 0, 1 )
+PopupMenu/constants/hseparation = 4
+PopupMenu/constants/vseparation = 4
+PopupMenu/fonts/font = null
+PopupMenu/icons/checked = null
+PopupMenu/icons/radio_checked = null
+PopupMenu/icons/radio_unchecked = null
+PopupMenu/icons/submenu = null
+PopupMenu/icons/unchecked = null
+PopupMenu/styles/hover = null
+PopupMenu/styles/labeled_separator_left = null
+PopupMenu/styles/labeled_separator_right = null
+PopupMenu/styles/panel = null
+PopupMenu/styles/panel_disabled = null
+PopupMenu/styles/separator = null
+PopupPanel/styles/panel = null
+ProgressBar/colors/font_color = Color( 0, 0, 0, 1 )
+ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+ProgressBar/fonts/font = null
+ProgressBar/styles/bg = null
+ProgressBar/styles/fg = null
+RichTextLabel/colors/default_color = Color( 0, 0, 0, 1 )
+RichTextLabel/colors/font_color_selected = Color( 0, 0, 0, 1 )
+RichTextLabel/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+RichTextLabel/colors/selection_color = Color( 0, 0, 0, 1 )
+RichTextLabel/constants/line_separation = 1
+RichTextLabel/constants/shadow_as_outline = 0
+RichTextLabel/constants/shadow_offset_x = 1
+RichTextLabel/constants/shadow_offset_y = 1
+RichTextLabel/constants/table_hseparation = 3
+RichTextLabel/constants/table_vseparation = 3
+RichTextLabel/fonts/bold_font = null
+RichTextLabel/fonts/bold_italics_font = null
+RichTextLabel/fonts/italics_font = null
+RichTextLabel/fonts/mono_font = null
+RichTextLabel/fonts/normal_font = null
+RichTextLabel/styles/focus = null
+RichTextLabel/styles/normal = null
+ScrollContainer/styles/bg = null
+SpinBox/icons/updown = null
+TabContainer/colors/font_color_bg = Color( 0, 0, 0, 1 )
+TabContainer/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+TabContainer/colors/font_color_fg = Color( 0, 0, 0, 1 )
+TabContainer/constants/hseparation = 4
+TabContainer/constants/label_valign_bg = 2
+TabContainer/constants/label_valign_fg = 0
+TabContainer/constants/side_margin = 8
+TabContainer/constants/top_margin = 24
+TabContainer/fonts/font = null
+TabContainer/icons/decrement = null
+TabContainer/icons/decrement_highlight = null
+TabContainer/icons/increment = null
+TabContainer/icons/increment_highlight = null
+TabContainer/icons/menu = null
+TabContainer/icons/menu_highlight = null
+TabContainer/styles/panel = null
+TabContainer/styles/tab_bg = null
+TabContainer/styles/tab_disabled = null
+TabContainer/styles/tab_fg = null
+Tabs/colors/font_color_bg = Color( 0, 0, 0, 1 )
+Tabs/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+Tabs/colors/font_color_fg = Color( 0, 0, 0, 1 )
+Tabs/constants/hseparation = 4
+Tabs/constants/label_valign_bg = 2
+Tabs/constants/label_valign_fg = 0
+Tabs/constants/top_margin = 24
+Tabs/fonts/font = null
+Tabs/icons/close = null
+Tabs/icons/decrement = null
+Tabs/icons/decrement_highlight = null
+Tabs/icons/increment = null
+Tabs/icons/increment_highlight = null
+Tabs/styles/button = null
+Tabs/styles/button_pressed = null
+Tabs/styles/panel = null
+Tabs/styles/tab_bg = null
+Tabs/styles/tab_disabled = null
+Tabs/styles/tab_fg = null
+TextEdit/colors/background_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/brace_mismatch_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/breakpoint_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/caret_background_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/caret_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/code_folding_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_background_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_existing_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_font_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_scroll_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_selected_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/current_line_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
+TextEdit/colors/function_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/line_number_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/mark_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/member_variable_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/number_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/safe_line_number_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/selection_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/symbol_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/word_highlighted_color = Color( 0, 0, 0, 1 )
+TextEdit/constants/completion_lines = 7
+TextEdit/constants/completion_max_width = 50
+TextEdit/constants/completion_scroll_width = 3
+TextEdit/constants/line_spacing = 4
+TextEdit/fonts/font = null
+TextEdit/icons/tab = null
+TextEdit/styles/completion = null
+TextEdit/styles/focus = null
+TextEdit/styles/normal = null
+TextEdit/styles/read_only = null
+ToolButton/colors/font_color = Color( 0, 0, 0, 1 )
+ToolButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+ToolButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+ToolButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+ToolButton/constants/hseparation = 3
+ToolButton/fonts/font = null
+ToolButton/styles/disabled = null
+ToolButton/styles/focus = null
+ToolButton/styles/hover = null
+ToolButton/styles/normal = null
+ToolButton/styles/pressed = null
+TooltipLabel/colors/font_color = Color( 0, 0, 0, 1 )
+TooltipLabel/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+TooltipLabel/constants/shadow_offset_x = 1
+TooltipLabel/constants/shadow_offset_y = 1
+TooltipLabel/fonts/font = null
+TooltipPanel/styles/panel = null
+Tree/colors/cursor_color = Color( 0, 0, 0, 1 )
+Tree/colors/custom_button_font_highlight = Color( 0, 0, 0, 1 )
+Tree/colors/drop_position_color = Color( 0, 0, 0, 1 )
+Tree/colors/font_color = Color( 0, 0, 0, 1 )
+Tree/colors/font_color_selected = Color( 0, 0, 0, 1 )
+Tree/colors/guide_color = Color( 0, 0, 0, 1 )
+Tree/colors/relationship_line_color = Color( 0, 0, 0, 1 )
+Tree/colors/selection_color = Color( 0, 0, 0, 1 )
+Tree/colors/title_button_color = Color( 0, 0, 0, 1 )
+Tree/constants/button_margin = 4
+Tree/constants/draw_guides = 1
+Tree/constants/draw_relationship_lines = 0
+Tree/constants/guide_width = 2
+Tree/constants/hseparation = 4
+Tree/constants/item_margin = 12
+Tree/constants/scroll_border = 4
+Tree/constants/scroll_speed = 12
+Tree/constants/vseparation = 4
+Tree/fonts/font = null
+Tree/fonts/title_button_font = null
+Tree/icons/arrow = null
+Tree/icons/arrow_collapsed = null
+Tree/icons/checked = null
+Tree/icons/select_arrow = null
+Tree/icons/unchecked = null
+Tree/icons/updown = null
+Tree/styles/bg = null
+Tree/styles/bg_focus = null
+Tree/styles/button_pressed = null
+Tree/styles/cursor = null
+Tree/styles/cursor_unfocused = null
+Tree/styles/custom_button = null
+Tree/styles/custom_button_hover = null
+Tree/styles/custom_button_pressed = null
+Tree/styles/selected = null
+Tree/styles/selected_focus = null
+Tree/styles/title_button_hover = null
+Tree/styles/title_button_normal = null
+Tree/styles/title_button_pressed = null
+VBoxContainer/constants/separation = 4
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = null
+VScrollBar/styles/grabber_highlight = null
+VScrollBar/styles/grabber_pressed = null
+VScrollBar/styles/scroll = null
+VScrollBar/styles/scroll_focus = null
+VSeparator/constants/separation = 4
+VSeparator/styles/separator = null
+VSlider/icons/grabber = null
+VSlider/icons/grabber_disabled = null
+VSlider/icons/grabber_highlight = null
+VSlider/icons/tick = null
+VSlider/styles/focus = null
+VSlider/styles/grabber_area = null
+VSlider/styles/grabber_disabled = null
+VSlider/styles/grabber_highlight = null
+VSlider/styles/slider = null
+VSplitContainer/constants/autohide = 1
+VSplitContainer/constants/separation = 12
+VSplitContainer/icons/grabber = null
+VSplitContainer/styles/bg = null
+WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
+WindowDialog/constants/close_h_ofs = 18
+WindowDialog/constants/close_v_ofs = 18
+WindowDialog/constants/scaleborder_size = 4
+WindowDialog/constants/title_height = 20
+WindowDialog/fonts/title_font = null
+WindowDialog/icons/close = null
+WindowDialog/icons/close_highlight = null
+WindowDialog/styles/panel = null
+
+[sub_resource type="CircleShape2D" id=19]
+radius = 290.112
+
+[sub_resource type="DynamicFont" id=20]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=22]
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=23]
+default_font = SubResource( 22 )
+
+[node name="CaesarCipher" type="Node"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 516.878, 299.568 )
+scale = Vector2( 1.15, 1.15 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Messages" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+
+[node name="DecryptedMsg" type="Label" parent="Messages"]
+margin_left = 581.488
+margin_top = 188.055
+margin_right = 991.488
+margin_bottom = 293.055
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.890196, 0.878431, 0.878431, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "PREPARE FOR
+YOUR CHALLENGE"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+
+[node name="KeyLabel" type="Label" parent="Messages"]
+margin_left = 153.0
+margin_top = 224.0
+margin_right = 481.0
+margin_bottom = 374.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Key Hint"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="TypedMsg" type="VBoxContainer" parent="Messages"]
+editor/display_folded = true
+margin_left = 562.392
+margin_top = 305.844
+margin_right = 1041.39
+margin_bottom = 466.844
+theme = SubResource( 4 )
+
+[node name="LetterRow1" type="HBoxContainer" parent="Messages/TypedMsg"]
+editor/display_folded = true
+margin_right = 478.0
+margin_bottom = 51.0
+theme = SubResource( 6 )
+alignment = 1
+
+[node name="Blank1" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 132.0
+margin_right = 159.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank2" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 163.0
+margin_right = 190.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank3" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 194.0
+margin_right = 221.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank4" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 225.0
+margin_right = 252.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank5" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 256.0
+margin_right = 283.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank6" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 287.0
+margin_right = 314.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank7" type="Label" parent="Messages/TypedMsg/LetterRow1"]
+margin_left = 318.0
+margin_right = 345.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="LetterRow2" type="HBoxContainer" parent="Messages/TypedMsg"]
+editor/display_folded = true
+margin_top = 55.0
+margin_right = 478.0
+margin_bottom = 106.0
+theme = SubResource( 8 )
+alignment = 1
+
+[node name="Blank8" type="Label" parent="Messages/TypedMsg/LetterRow2"]
+margin_left = 117.0
+margin_right = 144.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank9" type="Label" parent="Messages/TypedMsg/LetterRow2"]
+margin_left = 148.0
+margin_right = 175.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank10" type="Label" parent="Messages/TypedMsg/LetterRow2"]
+margin_left = 179.0
+margin_right = 206.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Space1" type="Label" parent="Messages/TypedMsg/LetterRow2"]
+margin_left = 210.0
+margin_right = 237.0
+margin_bottom = 51.0
+text = " "
+
+[node name="Blank11" type="Label" parent="Messages/TypedMsg/LetterRow2"]
+margin_left = 241.0
+margin_right = 268.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank12" type="Label" parent="Messages/TypedMsg/LetterRow2"]
+margin_left = 272.0
+margin_right = 299.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank13" type="Label" parent="Messages/TypedMsg/LetterRow2"]
+margin_left = 303.0
+margin_right = 330.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank14" type="Label" parent="Messages/TypedMsg/LetterRow2"]
+margin_left = 334.0
+margin_right = 361.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="LetterRow4" type="HBoxContainer" parent="Messages/TypedMsg"]
+margin_top = 110.0
+margin_right = 478.0
+margin_bottom = 161.0
+theme = SubResource( 10 )
+alignment = 1
+
+[node name="Blank15" type="Label" parent="Messages/TypedMsg/LetterRow4"]
+margin_left = 101.0
+margin_right = 128.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank16" type="Label" parent="Messages/TypedMsg/LetterRow4"]
+margin_left = 132.0
+margin_right = 159.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank17" type="Label" parent="Messages/TypedMsg/LetterRow4"]
+margin_left = 163.0
+margin_right = 190.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank18" type="Label" parent="Messages/TypedMsg/LetterRow4"]
+margin_left = 194.0
+margin_right = 221.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank19" type="Label" parent="Messages/TypedMsg/LetterRow4"]
+margin_left = 225.0
+margin_right = 252.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank20" type="Label" parent="Messages/TypedMsg/LetterRow4"]
+margin_left = 256.0
+margin_right = 283.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank21" type="Label" parent="Messages/TypedMsg/LetterRow4"]
+margin_left = 287.0
+margin_right = 314.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank22" type="Label" parent="Messages/TypedMsg/LetterRow4"]
+margin_left = 318.0
+margin_right = 345.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Blank23" type="Label" parent="Messages/TypedMsg/LetterRow4"]
+margin_left = 349.0
+margin_right = 376.0
+margin_bottom = 51.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "_"
+
+[node name="Spinner" type="Node" parent="."]
+
+[node name="SpinnerArea" type="Area2D" parent="Spinner"]
+position = Vector2( 310.392, 300.137 )
+script = ExtResource( 4 )
+
+[node name="Next" type="Button" parent="Spinner/SpinnerArea"]
+margin_left = 366.103
+margin_top = -95.8903
+margin_right = 599.103
+margin_bottom = -34.8903
+custom_fonts/font = SubResource( 11 )
+text = "Next Tutorial"
+
+[node name="Backspace" type="Button" parent="Spinner/SpinnerArea"]
+margin_left = 572.763
+margin_top = 169.046
+margin_right = 630.763
+margin_bottom = 195.046
+text = "Back"
+
+[node name="GoButton" type="Button" parent="Spinner/SpinnerArea"]
+margin_left = 330.278
+margin_top = -154.352
+margin_right = 393.278
+margin_bottom = -126.352
+custom_fonts/font = SubResource( 12 )
+text = "Spin"
+
+[node name="InnerWheel" type="TextureRect" parent="Spinner/SpinnerArea"]
+margin_left = -234.504
+margin_top = -233.294
+margin_right = 365.496
+margin_bottom = 366.706
+rect_scale = Vector2( 0.78, 0.78 )
+texture = ExtResource( 5 )
+
+[node name="OuterWheel" type="Sprite" parent="Spinner/SpinnerArea"]
+editor/display_folded = true
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 5 )
+
+[node name="A" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = -63.0
+margin_top = -291.0
+margin_right = -4.0
+margin_bottom = -248.0
+rect_rotation = -6.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="B" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = 13.0
+margin_top = -298.0
+margin_right = 65.0
+margin_bottom = -255.0
+rect_rotation = 8.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="C" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = 83.0
+margin_top = -287.0
+margin_right = 137.0
+margin_bottom = -244.0
+rect_rotation = 21.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="D" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = 147.0
+margin_top = -258.0
+margin_right = 204.0
+margin_bottom = -215.0
+rect_rotation = 34.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="E" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = 206.0
+margin_top = -216.0
+margin_right = 263.0
+margin_bottom = -173.0
+rect_rotation = 50.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="F" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = 250.0
+margin_top = -162.0
+margin_right = 309.0
+margin_bottom = -119.0
+rect_rotation = 63.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="G" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = 283.0
+margin_top = -96.0
+margin_right = 342.0
+margin_bottom = -52.0
+rect_rotation = 78.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="H" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = 298.0
+margin_top = -28.0
+margin_right = 357.0
+margin_bottom = 16.0
+rect_rotation = 91.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="I" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = 296.0
+margin_top = 44.0
+margin_right = 355.0
+margin_bottom = 88.0
+rect_rotation = 105.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="J" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = 277.0
+margin_top = 116.0
+margin_right = 336.0
+margin_bottom = 160.0
+rect_rotation = 120.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="K" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = 242.0
+margin_top = 176.0
+margin_right = 301.0
+margin_bottom = 220.0
+rect_rotation = 131.61
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="L" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = 193.0
+margin_top = 228.0
+margin_right = 252.0
+margin_bottom = 272.0
+rect_rotation = 145.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="M" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = 132.0
+margin_top = 269.0
+margin_right = 191.0
+margin_bottom = 313.0
+rect_rotation = 160.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="N" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = 64.0001
+margin_top = 290.999
+margin_right = 123.0
+margin_bottom = 334.999
+rect_rotation = 173.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="O" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = -9.99994
+margin_top = 298.999
+margin_right = 49.0001
+margin_bottom = 342.999
+rect_rotation = 188.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="P" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = -80.9999
+margin_top = 287.999
+margin_right = -21.9999
+margin_bottom = 331.999
+rect_rotation = 202.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="Q" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = -147.0
+margin_top = 259.999
+margin_right = -87.9999
+margin_bottom = 303.999
+rect_rotation = 216.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="R" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = -204.0
+margin_top = 216.999
+margin_right = -145.0
+margin_bottom = 260.999
+rect_rotation = 230.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="S" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = -249.0
+margin_top = 162.999
+margin_right = -190.0
+margin_bottom = 206.999
+rect_rotation = 243.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="T" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = -280.0
+margin_top = 97.9989
+margin_right = -221.0
+margin_bottom = 141.999
+rect_rotation = 256.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="U" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = -296.0
+margin_top = 29.0515
+margin_right = -237.0
+margin_bottom = 73.0515
+rect_rotation = 270.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="V" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = -295.0
+margin_top = -43.9485
+margin_right = -236.0
+margin_bottom = 0.0515442
+rect_rotation = 285.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="W" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = -276.0
+margin_top = -112.001
+margin_right = -217.0
+margin_bottom = -68.0011
+rect_rotation = 298.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+button_mask = 7
+
+[node name="X" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = -241.0
+margin_top = -176.001
+margin_right = -182.0
+margin_bottom = -132.001
+rect_rotation = 312.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="Y" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = -190.0
+margin_top = -226.001
+margin_right = -131.0
+margin_bottom = -182.001
+rect_rotation = 325.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="Z" type="Button" parent="Spinner/SpinnerArea/OuterWheel"]
+margin_left = -131.0
+margin_top = -268.001
+margin_right = -72.0
+margin_bottom = -224.001
+rect_rotation = 340.0
+theme = SubResource( 18 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+
+[node name="SpinnerCollisionArea" type="CollisionShape2D" parent="Spinner/SpinnerArea"]
+position = Vector2( 0.814484, 0 )
+shape = SubResource( 19 )
+
+[node name="Skip" type="Button" parent="Spinner/SpinnerArea"]
+margin_left = 520.992
+margin_top = 243.166
+margin_right = 699.992
+margin_bottom = 288.166
+custom_fonts/font = SubResource( 20 )
+text = "Skip Challenge"
+
+[node name="Locked" type="Label" parent="Spinner"]
+margin_left = 230.0
+margin_top = 361.0
+margin_right = 393.0
+margin_bottom = 420.0
+valign = 1
+
+[node name="ShiftAmountPrompt" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -458.671
+margin_top = 76.73
+margin_right = -249.671
+margin_bottom = 97.73
+custom_fonts/font = SubResource( 21 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Enter shift amount:"
+valign = 1
+
+[node name="ShiftAmountField" type="SpinBox" parent="."]
+margin_left = 613.493
+margin_top = 104.615
+margin_right = 747.493
+margin_bottom = 135.615
+theme = SubResource( 23 )
+max_value = 25.0
+align = 1
+[connection signal="input_event" from="Spinner/SpinnerArea" to="Spinner/SpinnerArea" method="_on_Spinner_input_event"]
+[connection signal="item_rect_changed" from="Spinner/SpinnerArea" to="Spinner/SpinnerArea" method="_on_SpinnerArea_item_rect_changed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/Next" to="Spinner/SpinnerArea" method="_on_Next_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/Backspace" to="Spinner/SpinnerArea" method="_on_Backspace_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/GoButton" to="Spinner/SpinnerArea" method="_on_GoButton_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/A" to="Spinner/SpinnerArea" method="_on_A_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/B" to="Spinner/SpinnerArea" method="_on_B_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/C" to="Spinner/SpinnerArea" method="_on_C_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/D" to="Spinner/SpinnerArea" method="_on_D_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/E" to="Spinner/SpinnerArea" method="_on_E_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/F" to="Spinner/SpinnerArea" method="_on_F_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/G" to="Spinner/SpinnerArea" method="_on_G_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/H" to="Spinner/SpinnerArea" method="_on_H_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/I" to="Spinner/SpinnerArea" method="_on_I_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/J" to="Spinner/SpinnerArea" method="_on_J_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/K" to="Spinner/SpinnerArea" method="_on_K_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/L" to="Spinner/SpinnerArea" method="_on_L_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/M" to="Spinner/SpinnerArea" method="_on_M_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/N" to="Spinner/SpinnerArea" method="_on_N_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/O" to="Spinner/SpinnerArea" method="_on_O_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/P" to="Spinner/SpinnerArea" method="_on_P_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/Q" to="Spinner/SpinnerArea" method="_on_Q_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/R" to="Spinner/SpinnerArea" method="_on_R_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/S" to="Spinner/SpinnerArea" method="_on_S_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/T" to="Spinner/SpinnerArea" method="_on_T_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/U" to="Spinner/SpinnerArea" method="_on_U_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/V" to="Spinner/SpinnerArea" method="_on_V_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/W" to="Spinner/SpinnerArea" method="_on_W_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/X" to="Spinner/SpinnerArea" method="_on_X_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/Y" to="Spinner/SpinnerArea" method="_on_Y_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/OuterWheel/Z" to="Spinner/SpinnerArea" method="_on_Z_pressed"]
+[connection signal="pressed" from="Spinner/SpinnerArea/Skip" to="Spinner/SpinnerArea" method="_on_Skip_pressed"]
