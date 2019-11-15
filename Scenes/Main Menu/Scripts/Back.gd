@@ -13,5 +13,5 @@ func _ready():
 #	pass
 
 
-func _on_NewGame_pressed():
-	get_tree().change_scene("res://Scenes/Level1.tscn")
+func _on_Back_pressed():
+	get_tree().change_scene("res://Scenes/Main Menu/MainMenu.tscn")

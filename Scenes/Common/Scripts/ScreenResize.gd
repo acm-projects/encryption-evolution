@@ -2,7 +2,7 @@ extends Node
 
 onready var viewport = get_viewport()
 
-var minimum_size = Vector2(960, 540)
+var minimum_size = Vector2(1024, 600)
 
 func _ready():
     viewport.connect("size_changed", self, "window_resize")
